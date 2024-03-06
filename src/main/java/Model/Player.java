@@ -1,6 +1,6 @@
 package Model;
 
-public class Player {
-  String name;
-  int RankingPoints;
+public record Player (String name,
+                      int rankingPoints,
+                      String rankingTitle){
 }

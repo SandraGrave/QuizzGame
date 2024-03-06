@@ -1,0 +1,25 @@
+package Model;
+
+public record Categorie(String randomCategorie,
+                        String generalKnowledge,
+                        String videoGames,
+                        String history,
+                        String scienceNature,
+                        String film,
+                        String mythology,
+                        String books,
+                        String geography,
+                        String scienceMath,
+                        String music,
+                        String comics,
+                        String television,
+                        String animals,
+                        String cartoonAndAnimation,
+                        String politics,
+                        String sports,
+                        String japaneseAnimeAndManga,
+                        String vehicles,
+                        String computers,
+                        String celebrities,
+                        String art) {
+}
