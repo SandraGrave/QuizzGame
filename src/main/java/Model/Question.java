@@ -4,5 +4,9 @@ public record Question(int id,
                        String categorie,
                        String type,
                        String difficulty,
-                       String questionStatement) {
+                       String questionStatement,
+                       String answerOptionA,
+                       String answerOptionB,
+                       String answerOptionC,
+                       String answerOptionD) {
 }
