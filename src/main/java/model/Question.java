@@ -1,8 +1,7 @@
-package Model;
+package model;
 
 public record Question(int id,
-                       String categorie,
-                       String type,
+                       String category,
                        String difficulty,
                        String questionStatement,
                        String answerOptionA,
