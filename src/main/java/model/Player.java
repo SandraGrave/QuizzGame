@@ -1,4 +1,4 @@
-package Model;
+package model;
 
 public record Player (String name,
                       int rankingPoints,
