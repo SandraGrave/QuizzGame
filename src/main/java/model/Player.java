@@ -1,6 +1,7 @@
 package model;
 
-public record Player (String name,
+public record Player (int playerId,
+                      String name,
                       int rankingPoints,
                       String rankingTitle){
 }

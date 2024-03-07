@@ -1,6 +1,7 @@
 package model;
 
-public record Category(String randomCategory,
+public record Category(int categoryId,
+                       String randomCategory,
                        String generalKnowledge,
                        String videoGames,
                        String history,
