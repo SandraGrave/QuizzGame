@@ -1,4 +1,4 @@
-package model;
+package de.bs14.lf8.model;
 
 public record Category(String projectManagement,
                        String network,
