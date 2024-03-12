@@ -1,26 +1,10 @@
 package model;
 
-public record Category(int categoryId,
-                       String randomCategory,
-                       String generalKnowledge,
-                       String videoGames,
-                       String history,
-                       String scienceNature,
-                       String film,
-                       String mythology,
-                       String books,
-                       String geography,
-                       String scienceMath,
-                       String music,
-                       String comics,
-                       String television,
-                       String animals,
-                       String cartoonAndAnimation,
-                       String politics,
-                       String sports,
-                       String japaneseAnimeAndManga,
-                       String vehicles,
-                       String computers,
-                       String celebrities,
-                       String art) {
+public record Category(String projectManagement,
+                       String network,
+                       String qualityManagement,
+                       String itSecurity,
+                       String itSystems,
+                       String business,
+                       String software) {
 }
