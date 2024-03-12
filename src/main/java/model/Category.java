@@ -1,7 +1,6 @@
 package model;
 
-public record Category(int categoryId,
-                       String projectManagement,
+public record Category(String projectManagement,
                        String network,
                        String qualityManagement,
                        String itSecurity,
