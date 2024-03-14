@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/lf8-dsle.iml" filepath="$PROJECT_DIR$/.idea/lf8-dsle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lf8.iml" filepath="$PROJECT_DIR$/lf8.iml" />
     </modules>
   </component>
 </project>
