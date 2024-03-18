@@ -2,6 +2,8 @@ package de.bs14.lf8.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Getter;
@@ -18,6 +20,7 @@ import lombok.ToString;
 public class Player {
 
   @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "PlayerID")
   private int playerId;
 
@@ -33,12 +36,9 @@ public class Player {
   @Column(name = "RankingTitle")
   private String rankingTitle;
 
-  public Player(int playerId, String playerName, String playerPassword, int rankingPoints, String rankingTitle) {
-    this.playerId = playerId;
+  public Player(String playerName, String playerPassword) {
     this.playerName = playerName;
     this.playerPassword = playerPassword;
-    this.rankingPoints = rankingPoints;
-    this.rankingTitle = rankingTitle;
   }
 }
 

@@ -3,6 +3,7 @@ package de.bs14.lf8.model;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Getter;
@@ -18,13 +19,12 @@ import lombok.ToString;
 @Setter
 public class Category {
 
-  public Category(int categoryId, String categoryName) {
-    this.categoryId = categoryId;
+  public Category(String categoryName) {
     this.categoryName = categoryName;
   }
 
   @Id
-  @GeneratedValue
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "CategoryID")
   private int categoryId;
 
