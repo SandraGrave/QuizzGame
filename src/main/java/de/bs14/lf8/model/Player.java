@@ -1,8 +1,44 @@
 package de.bs14.lf8.model;
 
-public record Player (int playerId,
-                      String name,
-                      int rankingPoints,
-                      String rankingTitle,
-                      String playerPassword){
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Entity
+@Table(name = "Player")
+@Getter
+@ToString
+@NoArgsConstructor
+@Setter
+public class Player {
+
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Column(name = "PlayerID")
+  private int playerId;
+
+  @Column(name = "PlayerName")
+  private String playerName;
+
+  @Column(name = "PlayerPassword")
+  private String playerPassword;
+
+  @Column(name = "RankingPoints")
+  private int rankingPoints;
+
+  @Column(name = "RankingTitle")
+  private String rankingTitle;
+
+  public Player(String playerName, String playerPassword) {
+    this.playerName = playerName;
+    this.playerPassword = playerPassword;
+  }
 }
+
