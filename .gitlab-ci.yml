@@ -1,0 +1,16 @@
+# .gitlab-ci.yml
+
+image: maven:latest
+
+build:
+  stage: build
+  script:
+    - mvn compile
+  artifacts:
+    paths:
+      - ./pipeline.xml
+
+test:
+  stage: test
+  script:
+    - mvn test

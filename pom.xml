@@ -6,7 +6,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>3.1.1</version>
+    <version>3.2.3</version>
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
   <groupId>de.bs14</groupId>
@@ -21,6 +21,7 @@
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-data-jpa</artifactId>
+      <version>3.2.3</version>
     </dependency>
     <dependency>
       <groupId>com.h2database</groupId>
@@ -30,6 +31,7 @@
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
+      <version>3.2.3</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -40,6 +42,7 @@
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
+      <version>1.18.30</version>
     </dependency>
   </dependencies>
 
@@ -48,6 +51,7 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
+        <version>3.2.3</version>
       </plugin>
     </plugins>
   </build>
