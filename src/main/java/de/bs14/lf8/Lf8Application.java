@@ -29,12 +29,12 @@ public class Lf8Application implements CommandLineRunner {
 	@Override
 	public void run(String... args) {
 		databaseInsertCheckerService.preProcessDatabase();
-		long output= categoryRepository.count();
-		System.out.println(output);
-		System.out.println(questionRepository.findAll());
-		System.out.println("gib testweise hier was ein, funktioniert der InputReader?");
-		String playerinput = inputReaderService.readInput();
-		System.out.println(playerinput);
+		//long output= categoryRepository.count();
+		//System.out.println(output);
+		//System.out.println(questionRepository.findAll());
+		//System.out.println("gib testweise hier was ein, funktioniert der InputReader?");
+		//String playerinput = inputReaderService.readInput();
+		//System.out.println(playerinput);
 
 		}
 	}
