@@ -1,6 +1,7 @@
 package de.bs14.lf8;
 
 import de.bs14.lf8.Service.DatabaseInsertCheckerService;
+import de.bs14.lf8.Service.InputReaderService;
 import de.bs14.lf8.repository.CategoryRepository;
 import de.bs14.lf8.repository.PlayerRepository;
 import de.bs14.lf8.repository.QuestionRepository;
@@ -19,6 +20,7 @@ public class Lf8Application implements CommandLineRunner {
 	private final PlayerRepository playerRepository;
 	private final QuestionRepository questionRepository;
 	private final DatabaseInsertCheckerService databaseInsertCheckerService;
+	private final InputReaderService inputReaderService;
 
 	public static void main(String[] args) {
 		new SpringApplicationBuilder().sources(Lf8Application.class).run(args);
@@ -26,12 +28,13 @@ public class Lf8Application implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) {
-			//long outputPlayer = playerRepository.count();
-			//System.out.println(outputPlayer);
-			databaseInsertCheckerService.preProcessDatabase();
-			long output= categoryRepository.count();
-			System.out.println(output);
-			System.out.println(questionRepository.findAll());
+		databaseInsertCheckerService.preProcessDatabase();
+		//long output= categoryRepository.count();
+		//System.out.println(output);
+		//System.out.println(questionRepository.findAll());
+		//System.out.println("gib testweise hier was ein, funktioniert der InputReader?");
+		//String playerinput = inputReaderService.readInput();
+		//System.out.println(playerinput);
 
 		}
 	}
