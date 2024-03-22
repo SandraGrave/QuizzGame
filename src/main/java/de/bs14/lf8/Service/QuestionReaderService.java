@@ -16,7 +16,6 @@ public class QuestionReaderService {
   private final QuestionRepository questionRepository;
   private final InputReaderService inputReaderService;
   private final CategoryRepository categoryRepository;
-  private final String categoryFormat = " %-9s | %-4s ";
 
   //+ getQuestion() : Void
   //+ showQuestion() : String
@@ -24,15 +23,13 @@ public class QuestionReaderService {
   //+ showAnswerOptions() : String
 
   public List<Question> getAllQuestions(QuestionRepository questionRepository) {
-    List<Question> allQuestionList = (List<Question>) questionRepository.findAll();
-    return allQuestionList;
+    return (List<Question>) questionRepository.findAll();
   }
 
 
   public List<Question> getQuestionsByCategoryList() {
     long wantedCategoryAsLong = chooseCategoryOption();
-    List<Question> questionsSpecificCategoryList = (List<Question>)  questionRepository.findQuestionsByCategory(wantedCategoryAsLong);
-    return questionsSpecificCategoryList;
+    return questionRepository.findQuestionsByCategory(wantedCategoryAsLong);
   }
 
 
@@ -43,8 +40,7 @@ public class QuestionReaderService {
   }
 
 
-  public void printQuestion(Question question) { //Soll sowohl für Random als auch Kategorie-bezogen funktionieren. - funktioniert
-
+  public void printQuestion(Question question) {
     //String rightAnswer = question.getRightAnswer();
 
     System.out.println("Frage: " + question.getQuestionStatement());
@@ -58,22 +54,14 @@ public class QuestionReaderService {
     String nextLine = System.lineSeparator();
     System.out.println("Wähle eine der folgenden Kategorien indem du die entsprechende Nummer eingibst und mit Enter bestätigst");
     List<Category> allCategories = (List<Category>) categoryRepository.findAll();
+    String categoryFormat = " %-9s | %-4s ";
     System.out.printf(categoryFormat, "CategoryId", "CategoryName" + nextLine);
 
     for (Category category : allCategories) {
       System.out.printf(categoryFormat, category.getCategoryId(), category.getCategoryName() + nextLine);
-
     }
 
-    //System.out.println("1 - Projekt-Management");
-    //System.out.println("2 - Netzwerk");
-    //System.out.println("3 - Qualitäts-Management");
-    //System.out.println("4 - IT-Security");
-    //System.out.println("5 - IT-Systeme");
-    //System.out.println("6 - Wirtschaft / Business");
-    //System.out.println("7 - Software");
     String wantedCategory = inputReaderService.readInput();
-    long wantedCategoryAsLong = Long.parseLong(wantedCategory);
-    return wantedCategoryAsLong;
+    return Long.parseLong(wantedCategory);
   }
 }
