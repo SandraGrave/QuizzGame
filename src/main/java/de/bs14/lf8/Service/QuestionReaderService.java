@@ -1,5 +1,6 @@
 package de.bs14.lf8.Service;
 
+import de.bs14.lf8.model.Category;
 import de.bs14.lf8.model.Question;
 import de.bs14.lf8.repository.CategoryRepository;
 import de.bs14.lf8.repository.QuestionRepository;
@@ -7,12 +8,15 @@ import java.util.List;
 import java.util.Random;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+
 @RequiredArgsConstructor
 @Service
 public class QuestionReaderService {
 
   private final QuestionRepository questionRepository;
   private final InputReaderService inputReaderService;
+  private final CategoryRepository categoryRepository;
+  private final String categoryFormat = " %-9s | %-4s ";
 
   //+ getQuestion() : Void
   //+ showQuestion() : String
@@ -39,7 +43,7 @@ public class QuestionReaderService {
   }
 
 
-  public void printQuestion(Question question) { //Soll sowohl für Random als auch Kategorie-bezogen funktionieren.
+  public void printQuestion(Question question) { //Soll sowohl für Random als auch Kategorie-bezogen funktionieren. - funktioniert
 
     //String rightAnswer = question.getRightAnswer();
 
@@ -51,14 +55,23 @@ public class QuestionReaderService {
   }
 
   public Long chooseCategoryOption() {
+    String nextLine = System.lineSeparator();
     System.out.println("Wähle eine der folgenden Kategorien indem du die entsprechende Nummer eingibst und mit Enter bestätigst");
-    System.out.println("1 - Projekt-Management");
-    System.out.println("2 - Netzwerk");
-    System.out.println("3 - Qualitäts-Management");
-    System.out.println("4 - IT-Security");
-    System.out.println("5 - IT-Systeme");
-    System.out.println("6 - Wirtschaft / Business");
-    System.out.println("7 - Software");
+    List<Category> allCategories = (List<Category>) categoryRepository.findAll();
+    System.out.printf(categoryFormat, "CategoryId", "CategoryName" + nextLine);
+
+    for (Category category : allCategories) {
+      System.out.printf(categoryFormat, category.getCategoryId(), category.getCategoryName() + nextLine);
+
+    }
+
+    //System.out.println("1 - Projekt-Management");
+    //System.out.println("2 - Netzwerk");
+    //System.out.println("3 - Qualitäts-Management");
+    //System.out.println("4 - IT-Security");
+    //System.out.println("5 - IT-Systeme");
+    //System.out.println("6 - Wirtschaft / Business");
+    //System.out.println("7 - Software");
     String wantedCategory = inputReaderService.readInput();
     long wantedCategoryAsLong = Long.parseLong(wantedCategory);
     return wantedCategoryAsLong;

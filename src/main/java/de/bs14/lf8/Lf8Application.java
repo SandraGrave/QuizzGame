@@ -1,12 +1,9 @@
 package de.bs14.lf8;
 
 import de.bs14.lf8.Service.DatabaseInsertCheckerService;
-import de.bs14.lf8.Service.InputReaderService;
 import de.bs14.lf8.Service.QuestionReaderService;
 import de.bs14.lf8.model.Question;
 import de.bs14.lf8.repository.CategoryRepository;
-import de.bs14.lf8.repository.PlayerRepository;
-import de.bs14.lf8.repository.QuestionRepository;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
@@ -20,6 +17,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 public class Lf8Application implements CommandLineRunner {
 	private final DatabaseInsertCheckerService databaseInsertCheckerService;
 	private final QuestionReaderService questionReaderService;
+	private final CategoryRepository categoryRepository;
 
 
 	public static void main(String[] args) {
@@ -40,5 +38,6 @@ public class Lf8Application implements CommandLineRunner {
 		Question randomQuestion = questionReaderService.getRandomQuestion(questionsSpecificCategoryList);
 		questionReaderService.printQuestion(randomQuestion);
 
-		}
+
+	}
 	}
