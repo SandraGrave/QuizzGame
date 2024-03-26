@@ -2,9 +2,7 @@ package de.bs14.lf8;
 
 import de.bs14.lf8.Service.DatabaseInsertCheckerService;
 import de.bs14.lf8.Service.QuestionReaderService;
-import de.bs14.lf8.model.Question;
 import de.bs14.lf8.repository.CategoryRepository;
-import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -34,10 +32,9 @@ public class Lf8Application implements CommandLineRunner {
 		//questionReaderService.printQuestion(randomQuestion);
 
 		// Gib Random Frage aus Kategorienliste - funktioniert, bitte nicht löschen, brauchen wir für GameMode
-		List<Question> questionsSpecificCategoryList = questionReaderService.getQuestionsByCategoryList();
-		Question randomQuestion = questionReaderService.getRandomQuestion(questionsSpecificCategoryList);
-		questionReaderService.printQuestion(randomQuestion);
-
+		//List<Question> questionsSpecificCategoryList = questionReaderService.getQuestionsByCategoryList();
+		//Question randomQuestion = questionReaderService.getRandomQuestion(questionsSpecificCategoryList);
+		//questionReaderService.printQuestion(randomQuestion);
 
 	}
 	}
