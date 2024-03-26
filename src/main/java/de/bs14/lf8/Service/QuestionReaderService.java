@@ -50,7 +50,7 @@ public class QuestionReaderService {
     System.out.println("Antwort " + question.getAnswerOptionD());
   }
 
-  public Long chooseCategoryOption() {
+  private Long chooseCategoryOption() {
     String nextLine = System.lineSeparator();
     System.out.println("Wähle eine der folgenden Kategorien indem du die entsprechende Nummer eingibst und mit Enter bestätigst");
     List<Category> allCategories = (List<Category>) categoryRepository.findAll();
