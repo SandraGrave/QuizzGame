@@ -21,31 +21,31 @@ import lombok.ToString;
   public class Question {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "QuestionId")
+    @Column
     private int questionId;
 
-    @Column(name = "Category")
+    @Column
     private int category;
 
-    @Column(name = "Difficulty")
+    @Column
     private int difficulty;
 
-    @Column(name = "QuestionStatement")
+    @Column
     private String questionStatement;
 
-    @Column(name = "AnswerOptionA")
+    @Column
     private String answerOptionA;
 
-    @Column(name = "AnswerOptionB")
+    @Column
     private String answerOptionB;
 
-    @Column(name = "AnswerOptionC")
+    @Column
     private String answerOptionC;
 
-    @Column(name = "AnswerOptionD")
+    @Column
     private String answerOptionD;
 
-    @Column(name = "RightAnswer")
+    @Column
     private String rightAnswer;
 
     public Question(int category, int difficulty, String questionStatement, String answerOptionA,

@@ -1,8 +1,10 @@
 package de.bs14.lf8.Service;
 
 import de.bs14.lf8.model.Category;
+import de.bs14.lf8.model.Player;
 import de.bs14.lf8.model.Question;
 import de.bs14.lf8.repository.CategoryRepository;
+import de.bs14.lf8.repository.PlayerRepository;
 import de.bs14.lf8.repository.QuestionRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -13,6 +15,7 @@ public class InsertService {
 
   private final QuestionRepository questionRepository;
   private final CategoryRepository categoryRepository;
+  private final PlayerRepository playerRepository;
 
   public void createInserts() {
     // Fragen zu Kategorie ProjektManagement
@@ -183,6 +186,9 @@ public class InsertService {
         new Category("Business"));
     categoryRepository.save(
         new Category("Software"));
+
+    playerRepository.save(new Player("TestPlayer", "pwTest", 0, "Iron"));
+    playerRepository.save(new Player("TestPlayer2", "pwTest2", 5, "Iron"));
   }
 }
 

@@ -21,24 +21,26 @@ public class Player {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column(name = "PlayerID")
+  @Column
   private int playerId;
 
-  @Column(name = "PlayerName")
+  @Column
   private String playerName;
 
-  @Column(name = "PlayerPassword")
+  @Column
   private String playerPassword;
 
-  @Column(name = "RankingPoints")
+  @Column
   private int rankingPoints;
 
-  @Column(name = "RankingTitle")
+  @Column
   private String rankingTitle;
 
-  public Player(String playerName, String playerPassword) {
+  public Player(String playerName, String playerPassword, int rankingPoints, String rankingTitle) {
     this.playerName = playerName;
     this.playerPassword = playerPassword;
+    this.rankingPoints = rankingPoints;
+    this.rankingTitle = rankingTitle;
   }
 }
 
