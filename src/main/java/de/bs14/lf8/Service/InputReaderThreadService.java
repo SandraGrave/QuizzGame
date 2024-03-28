@@ -16,8 +16,8 @@ public class InputReaderThreadService extends Thread {
 
   }
 
-  public void interrupt() { //wenn Zeit abgelaufen ist, soll nicht weiter auf Input vom Spieler gewartet werden, thread runterfahren //Todo
-
+  public void interrupt() { //wenn Zeit abgelaufen ist, soll nicht weiter auf Input vom Spieler gewartet werden, thread runterfahren
+    inputReaderService.stopWaiting();
   }
 
   public boolean isAnswerGiven() {

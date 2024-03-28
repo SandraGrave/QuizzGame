@@ -8,16 +8,16 @@ import org.springframework.stereotype.Service;
 public class CountdownService {
 
   private static final int TIME_LIMIT_SECONDS = 10;
-  private Timer timer;
   private int elapsedTime;
+  private Timer timer;
 
   public CountdownService() {
-    this.timer = new Timer();
     this.elapsedTime = 0;
   }
 
 
   public void startCountdown() {
+    timer = new Timer();
     timer.scheduleAtFixedRate(new TimerTask() {
       public void run() {
         if (elapsedTime >= TIME_LIMIT_SECONDS) {

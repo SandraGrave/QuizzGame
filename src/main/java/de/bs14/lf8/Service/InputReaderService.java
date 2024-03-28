@@ -34,7 +34,6 @@ public class InputReaderService {
     while (true) {
       try {
         if (System.in.available() > 0) {
-          System.out.println("test2");
           String output = scanner.nextLine();
           scanner.close();
           return output;

@@ -44,9 +44,7 @@ public class Lf8Application implements CommandLineRunner {
     List<Question> questionsSpecificCategoryList = questionReaderService.getQuestionsByCategoryList();
     Question randomQuestion = questionReaderService.getRandomQuestion(questionsSpecificCategoryList);
     questionReaderService.printQuestion(randomQuestion);
-    System.out.println(
-        "test"
-    );
+
     //rankingService.showRankingList();
 
     //countdownService.startCountdown();
