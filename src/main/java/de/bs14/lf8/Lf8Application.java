@@ -1,11 +1,9 @@
 package de.bs14.lf8;
 
-import de.bs14.lf8.Service.CountdownService;
-import de.bs14.lf8.Service.DatabaseInsertCheckerService;
-import de.bs14.lf8.Service.QuestionReaderService;
-import de.bs14.lf8.Service.RankingService;
+import de.bs14.lf8.Service.*;
 import de.bs14.lf8.model.Question;
 import de.bs14.lf8.repository.CategoryRepository;
+import de.bs14.lf8.repository.PlayerRepository;
 import de.bs14.lf8.repository.QuestionRepository;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
@@ -25,6 +23,10 @@ public class Lf8Application implements CommandLineRunner {
   private final CategoryRepository categoryRepository;
   private final RankingService rankingService;
   private final CountdownService countdownService;
+  private final HelpService helpService;
+  private final PlayerRepository playerRepository;
+  private final MainMenu mainMenu;
+  private final GameModeMenu gameModeMenu;
 
 
   public static void main(String[] args) {
@@ -45,8 +47,6 @@ public class Lf8Application implements CommandLineRunner {
     //Question randomQuestion = questionReaderService.getRandomQuestion(questionsSpecificCategoryList);
     //questionReaderService.printQuestion(randomQuestion);
 
-    //rankingService.showRankingList();
 
-    //countdownService.startCountdown();
   }
 }
