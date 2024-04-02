@@ -16,11 +16,7 @@ public class QuestionReaderService {
   private final QuestionRepository questionRepository;
   private final InputReaderService inputReaderService;
   private final CategoryRepository categoryRepository;
-
-  //+ getQuestion() : Void
-  //+ showQuestion() : String
-  //+ getAnswerOptions() : Void
-  //+ showAnswerOptions() : String
+  private final InputReaderThreadService inputReaderThreadService;
 
   public List<Question> getAllQuestions(QuestionRepository questionRepository) {
     return (List<Question>) questionRepository.findAll();
@@ -41,8 +37,6 @@ public class QuestionReaderService {
 
 
   public void printQuestion(Question question) {
-    //String rightAnswer = question.getRightAnswer();
-
     System.out.println("Frage: " + question.getQuestionStatement());
     System.out.println("Antwort " + question.getAnswerOptionA());
     System.out.println("Antwort " + question.getAnswerOptionB());
@@ -63,5 +57,17 @@ public class QuestionReaderService {
 
     String wantedCategory = inputReaderService.readInput();
     return Long.parseLong(wantedCategory);
+  }
+
+  public boolean isPlayerAnswerRight(Question question, String playerAnswer) {
+    String rightAnswer = question.getRightAnswer();
+
+    if (rightAnswer == playerAnswer){
+      System.out.println("Deine Antwort war Richtig.");
+      return true;}
+
+    else {
+      System.out.println("Deine Antwort war leider Falsch.");
+      return false;}
   }
 }
