@@ -9,10 +9,12 @@ public class InputReaderService {
 
   private long startTime;
 
-  public String readInputWithTimeLimit(Long timeToWait) {
-    Scanner scanner = new Scanner(System.in);
+  public String readInputWithTimeLimit(CountdownThreadService countdownThreadService) {
+
     startTime = System.currentTimeMillis();
-    while (System.currentTimeMillis() - startTime < timeToWait) {
+    Scanner scanner = new Scanner(System.in);
+    while (!countdownThreadService.isTimeUp()) {
+
       try {
         if (System.in.available() > 0) {
 
@@ -22,27 +24,23 @@ public class InputReaderService {
       } catch (IOException e) {
         throw new RuntimeException(e);
       }
-
     }
 
-    scanner.close();
+    System.out.println("Zeit abgelaufen!");
     return "";
   }
+
 
   public String readInput() {
     Scanner scanner = new Scanner(System.in);
     while (true) {
-      try {
-        if (System.in.available() > 0) {
-          String output = scanner.nextLine();
-          scanner.close();
-          return output;
+      if (scanner.hasNextLine()) {
+        String output = scanner.nextLine();
+        //scanner.close();
+        return output;
 
-        }
-
-      } catch (IOException e) {
-        throw new RuntimeException(e);
       }
+
     }
   }
 

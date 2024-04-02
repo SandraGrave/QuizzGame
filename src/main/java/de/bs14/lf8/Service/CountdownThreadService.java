@@ -4,25 +4,25 @@ import java.util.Timer;
 import java.util.TimerTask;
 import org.springframework.stereotype.Service;
 
-@Service
-public class CountdownService {
+//@Service
+public class CountdownThreadService extends Thread {
 
   private static final int TIME_LIMIT_SECONDS = 10;
   private int elapsedTime;
   private Timer timer;
 
-  public CountdownService() {
+  public CountdownThreadService() {
     this.elapsedTime = 0;
   }
 
 
-  public void startCountdown() {
+  public void run() {
     timer = new Timer();
     timer.scheduleAtFixedRate(new TimerTask() {
+      @Override
       public void run() {
         if (elapsedTime >= TIME_LIMIT_SECONDS) {
           timer.cancel();
-          System.out.println("Zeit abgelaufen!");
         } else {
           System.out.println("Verbleibende Zeit: " + (TIME_LIMIT_SECONDS - elapsedTime) + " Sekunden");
           elapsedTime++;

@@ -16,7 +16,6 @@ public class QuestionReaderService {
   private final QuestionRepository questionRepository;
   private final InputReaderService inputReaderService;
   private final CategoryRepository categoryRepository;
-  private final InputReaderThreadService inputReaderThreadService;
 
   public List<Question> getAllQuestions(QuestionRepository questionRepository) {
     return (List<Question>) questionRepository.findAll();
@@ -62,12 +61,12 @@ public class QuestionReaderService {
   public boolean isPlayerAnswerRight(Question question, String playerAnswer) {
     String rightAnswer = question.getRightAnswer();
 
-    if (rightAnswer == playerAnswer){
-      System.out.println("Deine Antwort war Richtig.");
-      return true;}
-
-    else {
-      System.out.println("Deine Antwort war leider Falsch.");
-      return false;}
+    if (rightAnswer.equals(playerAnswer)) {
+      System.out.println("Deine Antwort ( " + playerAnswer + " ) war richtig. Glückwunsch!");
+      return true;
+    } else {
+      System.out.println("Deine Antwort ( " + playerAnswer + " ) war leider falsch. Richtig wäre " + rightAnswer);
+      return false;
+    }
   }
 }

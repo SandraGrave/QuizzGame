@@ -14,7 +14,7 @@ public class InputReaderThreadService extends Thread {
   }
 
   public void run() {
-    playerAnswer = inputReaderService.readInputWithTimeLimit(100000L);
+    //playerAnswer = inputReaderService.readInputWithTimeLimit(100000L);
 
   }
 
