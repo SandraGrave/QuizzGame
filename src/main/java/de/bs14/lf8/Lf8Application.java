@@ -27,6 +27,7 @@ public class Lf8Application implements CommandLineRunner {
   private final PlayerRepository playerRepository;
   private final MainMenu mainMenu;
   private final GameModeMenu gameModeMenu;
+  private final InputReaderThreadService inputReaderThreadService;
 
 
   public static void main(String[] args) {
@@ -37,6 +38,7 @@ public class Lf8Application implements CommandLineRunner {
   public void run(String... args) {
     databaseInsertCheckerService.preProcessDatabase();
 
+
     // Gib Random Frage aus kompletter Liste - funktioniert, bitte nicht löschen, brauchen wir für GameMode
     //List<Question> questionList = questionReaderService.getAllQuestions(questionRepository);
     //Question randomQuestion = questionReaderService.getRandomQuestion(questionList);
@@ -46,6 +48,10 @@ public class Lf8Application implements CommandLineRunner {
     //List<Question> questionsSpecificCategoryList = questionReaderService.getQuestionsByCategoryList();
     //Question randomQuestion = questionReaderService.getRandomQuestion(questionsSpecificCategoryList);
     //questionReaderService.printQuestion(randomQuestion);
+    //inputReaderThreadService.start();
+    //String playerAnswer = inputReaderThreadService.getPlayerAnswer();
+    //questionReaderService.isPlayerAnswerRight(randomQuestion, playerAnswer);
+
 
 
   }

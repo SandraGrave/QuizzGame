@@ -1,7 +1,9 @@
 package de.bs14.lf8.Service;
 
-import java.io.IOException;
+import org.springframework.stereotype.Service;
 
+import java.io.IOException;
+@Service
 public class InputReaderThreadService extends Thread {
 
   private final InputReaderService inputReaderService;
@@ -12,7 +14,7 @@ public class InputReaderThreadService extends Thread {
   }
 
   public void run() {
-    playerAnswer = inputReaderService.readInputWithTimeLimit(10000L);
+    playerAnswer = inputReaderService.readInputWithTimeLimit(100000L);
 
   }
 
