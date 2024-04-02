@@ -45,12 +45,12 @@ public class Lf8Application implements CommandLineRunner {
     //questionReaderService.printQuestion(randomQuestion);
 
     //// Gib Random Frage aus Kategorienliste - funktioniert, bitte nicht löschen, brauchen wir für GameMode
-    List<Question> questionsSpecificCategoryList = questionReaderService.getQuestionsByCategoryList();
-    Question randomQuestion = questionReaderService.getRandomQuestion(questionsSpecificCategoryList);
-    questionReaderService.printQuestion(randomQuestion);
-    inputReaderThreadService.run();
-    String playerAnswer = inputReaderThreadService.getPlayerAnswer();
-    questionReaderService.isPlayerAnswerRight(randomQuestion, playerAnswer);
+    //List<Question> questionsSpecificCategoryList = questionReaderService.getQuestionsByCategoryList();
+    //Question randomQuestion = questionReaderService.getRandomQuestion(questionsSpecificCategoryList);
+    //questionReaderService.printQuestion(randomQuestion);
+    //inputReaderThreadService.start();
+    //String playerAnswer = inputReaderThreadService.getPlayerAnswer();
+    //questionReaderService.isPlayerAnswerRight(randomQuestion, playerAnswer);
 
 
 
