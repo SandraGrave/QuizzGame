@@ -22,12 +22,12 @@ public class Lf8Application implements CommandLineRunner {
   QuestionRepository questionRepository;
   private final CategoryRepository categoryRepository;
   private final RankingService rankingService;
-  private final CountdownService countdownService;
+  //private final CountdownThreadService countdownThreadService;
   private final HelpService helpService;
   private final PlayerRepository playerRepository;
   private final MainMenu mainMenu;
   private final GameModeMenu gameModeMenu;
-  private final InputReaderThreadService inputReaderThreadService;
+  private final InputReaderService inputReaderService;
 
 
   public static void main(String[] args) {
@@ -38,6 +38,7 @@ public class Lf8Application implements CommandLineRunner {
   public void run(String... args) {
     databaseInsertCheckerService.preProcessDatabase();
 
+    CountdownThreadService countdownThread = new CountdownThreadService();
 
     // Gib Random Frage aus kompletter Liste - funktioniert, bitte nicht löschen, brauchen wir für GameMode
     //List<Question> questionList = questionReaderService.getAllQuestions(questionRepository);
@@ -45,14 +46,14 @@ public class Lf8Application implements CommandLineRunner {
     //questionReaderService.printQuestion(randomQuestion);
 
     //// Gib Random Frage aus Kategorienliste - funktioniert, bitte nicht löschen, brauchen wir für GameMode
-    //List<Question> questionsSpecificCategoryList = questionReaderService.getQuestionsByCategoryList();
-    //Question randomQuestion = questionReaderService.getRandomQuestion(questionsSpecificCategoryList);
-    //questionReaderService.printQuestion(randomQuestion);
-    //inputReaderThreadService.start();
-    //String playerAnswer = inputReaderThreadService.getPlayerAnswer();
-    //questionReaderService.isPlayerAnswerRight(randomQuestion, playerAnswer);
-
-
+    List<Question> questionsSpecificCategoryList = questionReaderService.getQuestionsByCategoryList();
+    Question randomQuestion = questionReaderService.getRandomQuestion(questionsSpecificCategoryList);
+    questionReaderService.printQuestion(randomQuestion);
+    countdownThread.start();
+    String playerAnswer = inputReaderService.readInputWithTimeLimit(countdownThread);
+    countdownThread.stopCountdown();
+    questionReaderService.isPlayerAnswerRight(randomQuestion, playerAnswer);
+    // System.out.println(countdownThread.getRemainingTime());
 
   }
 }

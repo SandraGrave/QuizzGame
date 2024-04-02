@@ -7,7 +7,7 @@ import lombok.RequiredArgsConstructor;
 public class AskQuestionService {
 
   private final QuestionReaderService questionReaderService;
-  private final CountdownService countdownService;
+  private final CountdownThreadService countdownThreadService;
   private final InputReaderService inputReaderService;
 
 
@@ -17,10 +17,10 @@ public class AskQuestionService {
 
     InputReaderThreadService inputReaderThreadService = new InputReaderThreadService(inputReaderService);
     inputReaderThreadService.start();
-    countdownService.startCountdown();
-    while (countdownService.isTimeUp() == false) {
+    countdownThreadService.run();
+    while (countdownThreadService.isTimeUp() == false) {
       if (inputReaderThreadService.isAnswerGiven()) {
-        countdownService.stopCountdown();
+        countdownThreadService.stopCountdown();
         playerAnswer = inputReaderThreadService.getPlayerAnswer();
       }
     }
@@ -28,7 +28,7 @@ public class AskQuestionService {
     if (playerAnswer.equals("")) {
       // Player did not give answer
     } else { // Player gave Answer}
-      int remainingTime = countdownService.getRemainingTime();
+      int remainingTime = countdownThreadService.getRemainingTime();
     }
 
 
