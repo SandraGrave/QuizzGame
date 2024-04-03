@@ -8,11 +8,11 @@ import org.springframework.stereotype.Service;
 public class InputReaderService {
 
   private long startTime;
+  Scanner scanner = new Scanner(System.in);
 
   public String readInputWithTimeLimit(CountdownThreadService countdownThreadService) {
-
     startTime = System.currentTimeMillis();
-    Scanner scanner = new Scanner(System.in);
+
     while (!countdownThreadService.isTimeUp()) {
 
       try {
@@ -32,11 +32,9 @@ public class InputReaderService {
 
 
   public String readInput() {
-    Scanner scanner = new Scanner(System.in);
     while (true) {
       if (scanner.hasNextLine()) {
         String output = scanner.nextLine();
-        //scanner.close();
         return output;
 
       }

@@ -53,7 +53,7 @@ public class Lf8Application implements CommandLineRunner {
     //String playerAnswer = inputReaderService.readInputWithTimeLimit(countdownThread);
     //countdownThread.stopCountdown();
     //questionReaderService.isPlayerAnswerRight(randomQuestion, playerAnswer);
-    // System.out.println(countdownThread.getRemainingTime());
+    //System.out.println(countdownThread.getRemainingTime());
 
   }
 }
