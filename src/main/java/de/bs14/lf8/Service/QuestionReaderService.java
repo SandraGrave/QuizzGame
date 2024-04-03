@@ -1,14 +1,15 @@
 package de.bs14.lf8.Service;
 
+import java.util.List;
+import java.util.Random;
+
+import org.springframework.stereotype.Service;
+
 import de.bs14.lf8.model.Category;
 import de.bs14.lf8.model.Question;
 import de.bs14.lf8.repository.CategoryRepository;
 import de.bs14.lf8.repository.QuestionRepository;
-import java.util.List;
-import java.util.Locale;
-import java.util.Random;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
 
 @RequiredArgsConstructor
 @Service
@@ -63,10 +64,10 @@ public class QuestionReaderService {
     String rightAnswer = question.getRightAnswer();
 
     if (rightAnswer.equals(playerAnswer.toUpperCase())) {
-      System.out.println("Deine Antwort ( " + playerAnswer.toUpperCase() + " ) war richtig. Glückwunsch!");
+      System.out.println("Deine Antwort war richtig. Glückwunsch!");
       return true;
     } else {
-      System.out.println("Deine Antwort ( " + playerAnswer.toUpperCase() + " ) war leider falsch. Richtig wäre " + rightAnswer);
+      System.out.println("Deine Antwort war leider falsch. Richtig wäre " + rightAnswer);
       return false;
     }
   }
