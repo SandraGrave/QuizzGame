@@ -5,6 +5,7 @@ import de.bs14.lf8.model.Question;
 import de.bs14.lf8.repository.CategoryRepository;
 import de.bs14.lf8.repository.QuestionRepository;
 import java.util.List;
+import java.util.Locale;
 import java.util.Random;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -61,11 +62,11 @@ public class QuestionReaderService {
   public boolean isPlayerAnswerRight(Question question, String playerAnswer) {
     String rightAnswer = question.getRightAnswer();
 
-    if (rightAnswer.equals(playerAnswer)) {
-      System.out.println("Deine Antwort ( " + playerAnswer + " ) war richtig. Glückwunsch!");
+    if (rightAnswer.equals(playerAnswer.toUpperCase())) {
+      System.out.println("Deine Antwort ( " + playerAnswer.toUpperCase() + " ) war richtig. Glückwunsch!");
       return true;
     } else {
-      System.out.println("Deine Antwort ( " + playerAnswer + " ) war leider falsch. Richtig wäre " + rightAnswer);
+      System.out.println("Deine Antwort ( " + playerAnswer.toUpperCase() + " ) war leider falsch. Richtig wäre " + rightAnswer);
       return false;
     }
   }
