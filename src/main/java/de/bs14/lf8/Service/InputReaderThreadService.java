@@ -3,6 +3,8 @@ package de.bs14.lf8.Service;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
+import java.util.Locale;
+
 @Service
 public class InputReaderThreadService extends Thread {
 
