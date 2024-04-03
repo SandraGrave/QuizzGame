@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 //@Service
 public class CountdownThreadService extends Thread {
 
-  private static final int TIME_LIMIT_SECONDS = 10;
+  private static final int TIME_LIMIT_SECONDS = 30;
   private int elapsedTime;
   private Timer timer;
 
