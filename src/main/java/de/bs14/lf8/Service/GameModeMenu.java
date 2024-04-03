@@ -46,7 +46,7 @@ public class GameModeMenu {
                     wantedGameMode = 3;
                     break;
                 case "4":
-                    System.out.println("Züruck zum Main-Menu");
+                    System.out.println("Zurück zum Main-Menu");
                     x = false;
                 default:
                     System.out.println("Ungültige Eingabe " + s);
