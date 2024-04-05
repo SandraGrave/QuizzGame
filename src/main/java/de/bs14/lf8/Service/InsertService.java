@@ -187,8 +187,8 @@ public class InsertService {
     categoryRepository.save(
         new Category("Software"));
 
-    playerRepository.save(new Player("TestPlayer", "pwTest", 0, "Iron"));
-    playerRepository.save(new Player("TestPlayer2", "pwTest2", 5, "Iron"));
+    playerRepository.save(new Player("TestPlayer", "pwTest"));
+    playerRepository.save(new Player("TestPlayer2", "pwTest2"));
   }
 }
 

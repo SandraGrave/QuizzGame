@@ -41,7 +41,6 @@ import org.springframework.stereotype.Service;
 public class RankingService {
 
   private final PlayerRepository playerRepository;
-  //private final Player player;
 
   public void showRankingList() {
     String nextLine = System.lineSeparator();
