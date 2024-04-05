@@ -14,8 +14,4 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MariaDBDialect
         hbm2ddl:
-          auto: create
-
-  sql:
-    init:
-      mode: always
+          auto: update

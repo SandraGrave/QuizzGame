@@ -4,7 +4,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 import org.springframework.stereotype.Service;
 
-//@Service
+@Service
 public class CountdownThreadService extends Thread {
 
   private static final int TIME_LIMIT_SECONDS = 30;
