@@ -45,10 +45,10 @@ public class Lf8Application implements CommandLineRunner {
     CountdownThreadService countdownThread = new CountdownThreadService();
 
     // Gib Random Frage aus kompletter Liste - funktioniert, bitte nicht löschen, brauchen wir für GameMode
-    List<Question> questionList = questionReaderService.getAllQuestions(questionRepository);
-    Question randomQuestion = questionReaderService.getRandomQuestion(questionList);
-    questionReaderService.printQuestion(randomQuestion);
-    String playerAnswer = inputReaderService.readInputWithTimeLimit(countdownThread);
+    //List<Question> questionList = questionReaderService.getAllQuestions(questionRepository);
+    //Question randomQuestion = questionReaderService.getRandomQuestion(questionList);
+    //questionReaderService.printQuestion(randomQuestion);
+    //String playerAnswer = inputReaderService.readInputWithTimeLimit(countdownThread);
 
     //// Gib Random Frage aus Kategorienliste - funktioniert, bitte nicht löschen, brauchen wir für GameMode
     //List<Question> questionsSpecificCategoryList = questionReaderService.getQuestionsByCategoryList();
@@ -57,13 +57,12 @@ public class Lf8Application implements CommandLineRunner {
     //countdownThread.start();
     //String playerAnswer = inputReaderService.readInputWithTimeLimit(countdownThread);
     //countdownThread.stopCountdown();
-    questionReaderService.isPlayerAnswerRight(randomQuestion, playerAnswer);
+    //questionReaderService.isPlayerAnswerRight(randomQuestion, playerAnswer);
     //System.out.println(countdownThread.getRemainingTime());
-    Player currentPlayer = playerReaderService.findCurrentPlayer(playerRepository);
-    pointSystemCalculatorService.calculatePoints(currentPlayer,randomQuestion, playerAnswer);
-    rankingService.setRankingTitle(currentPlayer);
-    rankingService.showRankingList();
-
+    //Player currentPlayer = playerReaderService.findCurrentPlayer(playerRepository);
+    //pointSystemCalculatorService.calculatePoints(currentPlayer,randomQuestion, playerAnswer);
+    //rankingService.setRankingTitle(currentPlayer);
+    //rankingService.showRankingList();
 
   }
 }

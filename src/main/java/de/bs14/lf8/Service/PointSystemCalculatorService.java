@@ -23,6 +23,7 @@ public class PointSystemCalculatorService {
             player.setRankingPoints(newPlayerPoints);
             playerRepository.save(player);
 
+
         }
 
     }

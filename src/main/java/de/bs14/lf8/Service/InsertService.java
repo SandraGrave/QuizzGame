@@ -8,6 +8,7 @@ import de.bs14.lf8.repository.PlayerRepository;
 import de.bs14.lf8.repository.QuestionRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @RequiredArgsConstructor
 @Service
@@ -17,8 +18,10 @@ public class InsertService {
   private final CategoryRepository categoryRepository;
   private final PlayerRepository playerRepository;
 
+  @Transactional
   public void createInserts() {
     // Fragen zu Kategorie ProjektManagement
+    System.out.println("Datenbank wird initialisiert.");
     questionRepository.save(
         new Question(1, 1, "Was ist das Hauptziel des Projektmanagements?", "A. Projekte rechtzeitig abschließen",
             "B. Gewinn maximieren", "C. Kundenzufriedenheit steigern", "D. Risiken minimieren", "C"));
