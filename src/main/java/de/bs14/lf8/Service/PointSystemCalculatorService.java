@@ -19,7 +19,7 @@ public class PointSystemCalculatorService {
         int playerPoints = player.getRankingPoints();
 
         if(questionReaderService.isPlayerAnswerRight(question, playerAnswer)){
-            int newPlayerPoints = playerPoints + 50;
+            int newPlayerPoints = playerPoints + 1;
             player.setRankingPoints(newPlayerPoints);
             playerRepository.save(player);
 

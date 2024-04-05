@@ -1,42 +1,52 @@
 package de.bs14.lf8.Service;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import de.bs14.lf8.model.Player;
 import de.bs14.lf8.model.Question;
+import de.bs14.lf8.repository.CategoryRepository;
 import de.bs14.lf8.repository.PlayerRepository;
 import de.bs14.lf8.repository.QuestionRepository;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
-import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 class PointSystemCalculatorServiceTest {
-    PointSystemCalculatorService pointSystemCalculatorService = pointSystemCalculatorService = Mockito.mock(PointSystemCalculatorService.class);
-    QuestionRepository questionRepositoryMock = questionRepositoryMock = Mockito.mock(QuestionRepository.class);
-    PlayerRepository playerRepositoryMock = playerRepositoryMock = Mockito.mock(PlayerRepository.class);
-    InputReaderService inputReaderServiceMock = inputReaderServiceMock = Mockito.mock(InputReaderService.class);
+
+    QuestionRepository questionRepositoryMock = Mockito.mock(QuestionRepository.class);
+    PlayerRepository playerRepositoryMock = Mockito.mock(PlayerRepository.class);
+    InputReaderService inputReaderServiceMock = Mockito.mock(InputReaderService.class);
+    CategoryRepository categoryRepository = Mockito.mock(CategoryRepository.class);
 
 
     Question question = new Question(2, 1, "Test Question", "answerOptionA", "answerOptionB", "answerOptionC", "answerOptionD", "A");
     Player player = new Player("TestPlayer2", "123");
-    String playerAnswer = "A";
+
+    private final QuestionReaderService questionReaderService = new QuestionReaderService(questionRepositoryMock, inputReaderServiceMock,
+        categoryRepository);
+    private final PointSystemCalculatorService pointSystemCalculatorService = new PointSystemCalculatorService(questionReaderService,
+        playerRepositoryMock);
+
     @Test
     void testWhenCalculatePointsAnswerIsRightThenCalculateNewPointsAndSaveInDatabase() {
-
-
         //given
-        Mockito.when(playerRepositoryMock.findAll()).thenReturn(List.of(player));
-        Mockito.when(questionRepositoryMock.findAll()).thenReturn(List.of(question));
-        Mockito.when(inputReaderServiceMock.readInput()).thenReturn(playerAnswer);
+        String playerAnswer = "A";
 
         // when
-
-        output = pointSystemCalculatorService.calculatePoints(player, question, playerAnswer);
-
+        pointSystemCalculatorService.calculatePoints(player, question, playerAnswer);
 
         //then
-        assertEquals(player.getRankingPoints(), output);
+        assertEquals(1, player.getRankingPoints());
+    }
+
+    @Test
+    void testWhenCalculatePointsAnswerIsWrongThenNoChange() {
+        //given
+        String playerAnswer = "B";
+
+        // when
+        pointSystemCalculatorService.calculatePoints(player, question, playerAnswer);
+
+        //then
+        assertEquals(0, player.getRankingPoints());
     }
 }
