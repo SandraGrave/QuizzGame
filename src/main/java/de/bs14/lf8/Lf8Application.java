@@ -1,11 +1,10 @@
 package de.bs14.lf8;
 
 import de.bs14.lf8.Service.*;
-import de.bs14.lf8.model.Question;
+import de.bs14.lf8.model.Player;
 import de.bs14.lf8.repository.CategoryRepository;
 import de.bs14.lf8.repository.PlayerRepository;
 import de.bs14.lf8.repository.QuestionRepository;
-import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -28,6 +27,7 @@ public class Lf8Application implements CommandLineRunner {
   private final MainMenu mainMenu;
   private final GameModeMenu gameModeMenu;
   private final InputReaderService inputReaderService;
+  private final PlayerReaderService playerReaderService;
 
 
   public static void main(String[] args) {
@@ -46,14 +46,16 @@ public class Lf8Application implements CommandLineRunner {
     //questionReaderService.printQuestion(randomQuestion);
 
     //// Gib Random Frage aus Kategorienliste - funktioniert, bitte nicht löschen, brauchen wir für GameMode
-    //List<Question> questionsSpecificCategoryList = questionReaderService.getQuestionsByCategoryList();
-    //Question randomQuestion = questionReaderService.getRandomQuestion(questionsSpecificCategoryList);
-    //questionReaderService.printQuestion(randomQuestion);
-    //countdownThread.start();
-    //String playerAnswer = inputReaderService.readInputWithTimeLimit(countdownThread);
-    //countdownThread.stopCountdown();
-    //questionReaderService.isPlayerAnswerRight(randomQuestion, playerAnswer);
-    //System.out.println(countdownThread.getRemainingTime());
-
+    /*List<Question> questionsSpecificCategoryList = questionReaderService.getQuestionsByCategoryList();
+    Question randomQuestion = questionReaderService.getRandomQuestion(questionsSpecificCategoryList);
+    questionReaderService.printQuestion(randomQuestion);
+    countdownThread.start();
+    String playerAnswer = inputReaderService.readInputWithTimeLimit(countdownThread);
+    countdownThread.stopCountdown();
+    questionReaderService.isPlayerAnswerRight(randomQuestion, playerAnswer);
+    System.out.println(countdownThread.getRemainingTime());*/
+    Player currentPlayer = playerReaderService.findCurrentPlayer(playerRepository);
+    rankingService.setRankingTitle(currentPlayer);
+    rankingService.showRankingList();
   }
 }

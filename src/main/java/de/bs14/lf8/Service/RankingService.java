@@ -41,6 +41,7 @@ import org.springframework.stereotype.Service;
 public class RankingService {
 
   private final PlayerRepository playerRepository;
+  //private final Player player;
 
   public void showRankingList() {
     String nextLine = System.lineSeparator();
@@ -56,18 +57,24 @@ public class RankingService {
     }
 
   }
-  public String rankingTitle(int rankingPoints) {
+  public void setRankingTitle(Player player){
+    int rankingPoints = player.getRankingPoints();
 
     if (rankingPoints >= 120) {
-      return "Gold";
+      player.setRankingTitle("Gold");
+      playerRepository.save(player);
     } else if (rankingPoints >= 90) {
-      return "Silver";
+      player.setRankingTitle("Silver");
+      playerRepository.save(player);
     } else if (rankingPoints >= 50) {
-      return "Bronze";
+      player.setRankingTitle("Bronze");
+      playerRepository.save(player);
     } else if (rankingPoints >= 10) {
-      return "Iron";
+      player.setRankingTitle("Iron");
+      playerRepository.save(player);
     } else {
-      return "Noch keinen Titel";
+      player.setRankingTitle("Noch keinen Titel");
+      playerRepository.save(player);
     }
 
   }
