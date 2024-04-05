@@ -19,6 +19,19 @@ public class QuestionReaderService {
   private final InputReaderService inputReaderService;
   private final CategoryRepository categoryRepository;
 
+
+  public void printQuestionOfWholePool() {
+    List<Question> questionList = getAllQuestions(questionRepository);
+    Question randomQuestion = getRandomQuestion(questionList);
+    printQuestion(randomQuestion);
+  }
+
+  public void printQuestionOfCategoryPool() {
+    List<Question> questionsSpecificCategoryList = getQuestionsByCategoryList();
+    Question randomQuestion = getRandomQuestion(questionsSpecificCategoryList);
+    printQuestion(randomQuestion);
+  }
+
   public List<Question> getAllQuestions(QuestionRepository questionRepository) {
     return (List<Question>) questionRepository.findAll();
   }
