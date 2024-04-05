@@ -54,8 +54,8 @@ public class Lf8Application implements CommandLineRunner {
     countdownThread.stopCountdown();
     questionReaderService.isPlayerAnswerRight(randomQuestion, playerAnswer);
     System.out.println(countdownThread.getRemainingTime());*/
-    Player currentPlayer = playerReaderService.findCurrentPlayer(playerRepository);
+    /*Player currentPlayer = playerReaderService.findCurrentPlayer(playerRepository);
     rankingService.setRankingTitle(currentPlayer);
-    rankingService.showRankingList();
+    rankingService.showRankingList();*/
   }
 }
