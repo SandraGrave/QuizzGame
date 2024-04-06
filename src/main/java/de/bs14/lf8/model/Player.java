@@ -36,11 +36,9 @@ public class Player {
   @Column
   private String rankingTitle;
 
-  public Player(String playerName, String playerPassword, int rankingPoints, String rankingTitle) {
+  public Player(String playerName, String playerPassword) {
     this.playerName = playerName;
     this.playerPassword = playerPassword;
-    this.rankingPoints = rankingPoints;
-    this.rankingTitle = rankingTitle;
   }
 }
 
