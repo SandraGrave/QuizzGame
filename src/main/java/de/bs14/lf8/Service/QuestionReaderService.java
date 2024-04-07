@@ -27,10 +27,11 @@ public class QuestionReaderService {
     return randomQuestion;
   }
 
-  public void printQuestionOfCategoryPool() {
+  public Question printQuestionOfCategoryPool() {
     List<Question> questionsSpecificCategoryList = getQuestionsByCategoryList();
     Question randomQuestion = getRandomQuestion(questionsSpecificCategoryList);
     printQuestion(randomQuestion);
+    return randomQuestion;
   }
 
   public List<Question> getAllQuestions(QuestionRepository questionRepository) {

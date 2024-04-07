@@ -1,6 +1,7 @@
 package de.bs14.lf8.Service;
 
 import de.bs14.lf8.Controller.SoloMode;
+import de.bs14.lf8.Controller.TrainingMode;
 import de.bs14.lf8.model.Player;
 import de.bs14.lf8.repository.PlayerRepository;
 import java.util.Scanner;
@@ -11,16 +12,16 @@ import org.springframework.stereotype.Service;
 @Service
 public class GameModeMenu {
 
-  private final SoloMode soloMode;
   private final InputReaderService inputReaderService;
   private final QuestionReaderService questionReaderService;
   private final PlayerReaderService playerReaderService;
   private final PlayerRepository playerRepository;
+  private final SoloMode soloMode;
+  private final TrainingMode trainingMode;
 
-  public int chooseGameMode() {
+  public void chooseGameMode() {
 
     String nextLine = System.lineSeparator();
-    int wantedGameMode = 0;
 
     Scanner in = new Scanner(System.in);
     Boolean x = true;
@@ -38,7 +39,7 @@ public class GameModeMenu {
 
       switch (s) {
         case "1":
-          System.out.println("Willkommen zum Singleplayer Mode" + nextLine + "Das Spiel startet!");
+          System.out.println("Willkommen zum Singleplayer-Mode" + nextLine + "Das Spiel startet!");
           Player currentPlayer = playerReaderService.findCurrentPlayer(playerRepository);
           for (int i = 0; i <= 2; i++) {
             soloMode.startGameModeRound(currentPlayer, inputReaderService, questionReaderService);
@@ -47,16 +48,19 @@ public class GameModeMenu {
           x = false;
           break;
         case "2":
-          System.out.println("Willkommen zum Training Mode" + nextLine + "Das Spiel startet bald");
+          System.out.println("Willkommen zum Training-Mode" + nextLine + "Das Spiel startet bald");
+          Player currentTrainingPlayer = playerReaderService.findCurrentPlayer(playerRepository);
+          for (int i = 0; i <= 2; i++) {
+            trainingMode.startGameModeRound(currentTrainingPlayer, inputReaderService, questionReaderService);
+          }
+          trainingMode.endGame();
           x = false;
-          wantedGameMode = 2;
           break;
         case "3":
-          System.out.println("Willkommen zum Multiplayer Mode" + nextLine + "Das Spiel startet bald.");
-          wantedGameMode = 3;
+          System.out.println("Willkommen zum Multiplayer-Mode" + nextLine + "Das Spiel startet bald.");
           break;
         case "4":
-          System.out.println("Züruck zum Main-Menü");
+          System.out.println("Zurück zum Main-Menü");
           x = false;
         default:
           System.out.println("Ungültige Eingabe " + s);
@@ -65,6 +69,5 @@ public class GameModeMenu {
 
 
     }
-    return wantedGameMode;
   }
 }

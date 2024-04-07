@@ -18,11 +18,7 @@ import org.springframework.stereotype.Component;
 public class SoloMode implements GameMode { //gegen Zeit, Punkte sammeln möglich, keine Kategorie wählen
 
   private final QuestionReaderService questionReaderService;
-  private final QuestionRepository questionRepository;
-  private final CountdownThreadService countdownThread;
   private final RankingService rankingService;
-  private final PlayerReaderService playerReaderService;
-  private final PlayerRepository playerRepository;
   private final PointSystemCalculatorService pointSystemCalculatorService;
 
 // Todo: Anzeigen, wie viele Punkte man mit der Runde erhalten hat
