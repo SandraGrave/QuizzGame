@@ -28,9 +28,9 @@ public class GameModeMenu {
 
       System.out.println("--------------------------");
       System.out.println("Wähle einen Spiel-Modus");
-      System.out.println("1. Singleplayer - Spieler alleine gegen die Zeit");
-      System.out.println("2. Training - Übe ohne Zeitlimit bestimmte Kategorien");
-      System.out.println("3. Multiplayer - Spiele gegen einen anderen Spieler");
+      System.out.println("1. Singleplayer - Spieler alleine gegen die Zeit und sammel Rangpunkte.");
+      System.out.println("2. Training - Übe ohne Zeitlimit bestimmte Kategorien (Rangpunkte sammeln ist hier nicht möglich.");
+      System.out.println("3. Multiplayer - Spiele gegen einen anderen Spieler und sammelt Rangpunkte.");
       System.out.println("4. Gehe zum Main-Menu");
       System.out.println("Gib deine Wahl ein: ");
 
