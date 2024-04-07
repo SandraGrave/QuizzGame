@@ -52,7 +52,7 @@ public class QuestionReaderService {
 
 
   public void printQuestion(Question question) {
-    System.out.println("--------------------------");
+    System.out.println("---------------------------------------------------");
     System.out.println("Frage: " + question.getQuestionStatement());
     System.out.println("Antwort " + question.getAnswerOptionA());
     System.out.println("Antwort " + question.getAnswerOptionB());
