@@ -1,7 +1,6 @@
 package de.bs14.lf8.Service;
 
-import de.bs14.lf8.Controller.MutliplayerMode;
-import de.bs14.lf8.Controller.SoloMode;
+import de.bs14.lf8.Controller.RankedMode;
 import de.bs14.lf8.Controller.TrainingMode;
 import de.bs14.lf8.model.Player;
 import de.bs14.lf8.repository.PlayerRepository;
@@ -17,9 +16,9 @@ public class GameModeMenu {
   private final QuestionReaderService questionReaderService;
   private final PlayerReaderService playerReaderService;
   private final PlayerRepository playerRepository;
-  private final SoloMode soloMode;
+  private final RankedMode rankedMode;
   private final TrainingMode trainingMode;
-  private final MutliplayerMode multiplayerMode;
+  private final RankingService rankingService;
 
 
   public void chooseGameMode() {
@@ -45,9 +44,9 @@ public class GameModeMenu {
           System.out.println("Willkommen zum Singleplayer-Mode" + nextLine + "Das Spiel startet!");
           Player currentPlayer = playerReaderService.findCurrentPlayer(playerRepository);
           for (int i = 0; i <= 2; i++) {
-            soloMode.startGameModeRound(currentPlayer, inputReaderService, questionReaderService);
+            rankedMode.startGameModeRound(currentPlayer, inputReaderService, questionReaderService);
           }
-          soloMode.endGame();
+          rankedMode.endGame(rankingService);
           x = false;
           break;
 
@@ -57,7 +56,7 @@ public class GameModeMenu {
           for (int i = 0; i <= 2; i++) {
             trainingMode.startGameModeRound(currentTrainingPlayer, inputReaderService, questionReaderService);
           }
-          trainingMode.endGame();
+          trainingMode.endGame(rankingService);
           x = false;
           break;
 
@@ -65,15 +64,15 @@ public class GameModeMenu {
           System.out.println("Willkommen zum Multiplayer-Mode" + nextLine + "Das Spiel startet!");
           Player multiplayerOne = playerReaderService.findCurrentPlayer(playerRepository);
           for (int i = 0; i <= 2; i++) {
-            multiplayerMode.startGameModeRound(multiplayerOne, inputReaderService, questionReaderService);
+            rankedMode.startGameModeRound(multiplayerOne, inputReaderService, questionReaderService);
           }
           System.out.println("Spielerwechsel steht an!");
           Player multiplayerTwo = playerReaderService.findCurrentPlayer(playerRepository);
           for (int i = 0; i <= 2; i++) {
-            multiplayerMode.startGameModeRound(multiplayerTwo, inputReaderService, questionReaderService);
+            rankedMode.startGameModeRound(multiplayerTwo, inputReaderService, questionReaderService);
           }
-          multiplayerMode.identifyWinner(); //Todo: Wer hat gewonnen?
-          multiplayerMode.endGame();
+          rankedMode.identifyWinner(multiplayerOne, multiplayerTwo); //Todo: Wer hat gewonnen?
+          rankedMode.endGame(rankingService);
           x = false;
           break;
 

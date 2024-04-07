@@ -14,22 +14,12 @@ import org.springframework.stereotype.Component;
 public class TrainingMode implements GameMode {
 
   private final QuestionReaderService questionReaderService;
-  private final RankingService rankingService;
 
   @Override
   public void startGameModeRound(Player currentPlayer, InputReaderService inputReaderService, QuestionReaderService questionReaderService) {
     Question question = getQuestion();
     String playerAnswer = inputReaderService.readInput();
     questionReaderService.isPlayerAnswerRight(question, playerAnswer);
-  }
-
-  @Override
-  public void endGame() {
-    String nextLine = System.lineSeparator();
-
-    System.out.println(nextLine + "Hier siehst du die aktuelle Rangliste:");
-    rankingService.showRankingList();
-
   }
 
   @Override

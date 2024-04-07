@@ -13,7 +13,6 @@ import java.util.List;
 @EnableConfigurationProperties
 @RequiredArgsConstructor
 public class Lf8Application implements CommandLineRunner {
-
   private final DatabaseInsertCheckerService databaseInsertCheckerService;
   private final MainMenu mainMenu;
 
