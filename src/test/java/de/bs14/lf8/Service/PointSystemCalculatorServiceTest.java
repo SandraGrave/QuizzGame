@@ -32,7 +32,7 @@ class PointSystemCalculatorServiceTest {
         String playerAnswer = "A";
 
         // when
-        pointSystemCalculatorService.calculatePoints(player, question, playerAnswer);
+        pointSystemCalculatorService.setCalculatedPoints(player, question, playerAnswer);
 
         //then
         assertEquals(1, player.getRankingPoints());
@@ -44,7 +44,7 @@ class PointSystemCalculatorServiceTest {
         String playerAnswer = "B";
 
         // when
-        pointSystemCalculatorService.calculatePoints(player, question, playerAnswer);
+      pointSystemCalculatorService.setCalculatedPoints(player, question, playerAnswer);
 
         //then
         assertEquals(0, player.getRankingPoints());

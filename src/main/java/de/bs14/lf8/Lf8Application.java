@@ -1,5 +1,6 @@
 package de.bs14.lf8;
 
+import de.bs14.lf8.Controller.SoloMode;
 import de.bs14.lf8.Service.*;
 import de.bs14.lf8.model.Player;
 import de.bs14.lf8.model.Question;
@@ -24,7 +25,7 @@ public class Lf8Application implements CommandLineRunner {
   private final QuestionRepository questionRepository;
   private final CategoryRepository categoryRepository;
   private final RankingService rankingService;
-  //private final CountdownThreadService countdownThreadService;
+  private final CountdownThreadService countdownThreadService;
   private final HelpService helpService;
   private final PlayerRepository playerRepository;
   private final MainMenu mainMenu;
@@ -32,6 +33,7 @@ public class Lf8Application implements CommandLineRunner {
   private final InputReaderService inputReaderService;
   private final PlayerReaderService playerReaderService;
   private final PointSystemCalculatorService pointSystemCalculatorService;
+  private final SoloMode soloMode;
 
 
   public static void main(String[] args) {
@@ -41,8 +43,10 @@ public class Lf8Application implements CommandLineRunner {
   @Override
   public void run(String... args) {
     databaseInsertCheckerService.preProcessDatabase();
+    mainMenu.showMainMenu();
 
-    CountdownThreadService countdownThread = new CountdownThreadService();
+    //soloMode.startGameMode(inputReaderService,questionReaderService);
+    //soloMode.endGame();
 
     // Gib Random Frage aus kompletter Liste - funktioniert, bitte nicht löschen, brauchen wir für GameMode
     //List<Question> questionList = questionReaderService.getAllQuestions(questionRepository);

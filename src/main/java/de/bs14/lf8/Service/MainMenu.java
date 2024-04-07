@@ -18,23 +18,23 @@ public class MainMenu {
         Scanner in = new Scanner(System.in);
         boolean x = true;
         while(x) {
-                System.out.println("--------------------------");
-                System.out.println("Willkommen zum Quiz spiel");
-                System.out.println("1. Wähle Spiel Modus");
-                System.out.println("2. Zeige Rangliste");
-                System.out.println("3. Spiel beenden");
-                System.out.println("h. Zeige Help Menu");
-                System.out.println("Gib deine Wahl ein: ");
+          System.out.println("--------------------------");
+          System.out.println("Willkommen zum Quiz-Spiel");
+          System.out.println("1. Wähle Spiel-Modus");
+          System.out.println("2. Zeige Rangliste");
+          System.out.println("3. Spiel beenden");
+          System.out.println("h. Zeige Hilfe-Menü");
+          System.out.println("Gib deine Wahl ein und bestätige mit Enter: ");
 
-            String s = in.nextLine();
+          String s = in.nextLine();
 
-            switch (s) {
-                case "1":
-                    System.out.println("Wähle Spiel Modus");
-                    gameModeMenu.chooseGameMode();
-                    break;
-                case "2":
-                    System.out.println("Ranking List");
+          switch (s) {
+            case "1":
+              System.out.println("Wähle Spiel Modus");
+              gameModeMenu.chooseGameMode();
+              break;
+            case "2":
+              System.out.println("Ranking List");
                     rankingService.showRankingList();
                     break;
                 case "3":

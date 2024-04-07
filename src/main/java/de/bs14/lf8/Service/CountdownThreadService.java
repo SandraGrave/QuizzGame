@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class CountdownThreadService extends Thread {
 
-  private static final int TIME_LIMIT_SECONDS = 30;
+  private static final int timeLimitSeconds = 30;
   private int elapsedTime;
   private Timer timer;
 
@@ -21,10 +21,18 @@ public class CountdownThreadService extends Thread {
     timer.scheduleAtFixedRate(new TimerTask() {
       @Override
       public void run() {
-        if (elapsedTime >= TIME_LIMIT_SECONDS) {
+        if (elapsedTime >= timeLimitSeconds) {
           timer.cancel();
         } else {
-          System.out.println("Verbleibende Zeit: " + (TIME_LIMIT_SECONDS - elapsedTime) + " Sekunden");
+          if (timeLimitSeconds - elapsedTime <= 5)  // Weniger als oder gleich 5 Sekunden verbleiben, gib jede Sekunde aus
+          {
+            System.out.println("Verbleibende Zeit: " + (timeLimitSeconds - elapsedTime) + " Sekunden");
+
+          } else { // Mehr als 5 Sekunden verbleiben, gib alle 5 Sekunden aus
+            if (elapsedTime % 5 == 0) {
+              System.out.println("Verbleibende Zeit: " + (timeLimitSeconds - elapsedTime) + " Sekunden");
+            }
+          }
           elapsedTime++;
         }
       }
@@ -33,7 +41,7 @@ public class CountdownThreadService extends Thread {
   }
 
   public boolean isTimeUp() {
-    return elapsedTime >= TIME_LIMIT_SECONDS;
+    return elapsedTime >= timeLimitSeconds;
   }
 
   public void stopCountdown() {
@@ -41,6 +49,6 @@ public class CountdownThreadService extends Thread {
   }
 
   public int getRemainingTime() {
-    return TIME_LIMIT_SECONDS - elapsedTime;
+    return timeLimitSeconds - elapsedTime;
   }
 }

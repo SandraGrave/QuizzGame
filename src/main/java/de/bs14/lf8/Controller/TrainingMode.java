@@ -4,6 +4,7 @@ import de.bs14.lf8.Service.CountdownThreadService;
 import de.bs14.lf8.Service.InputReaderService;
 import de.bs14.lf8.Service.QuestionReaderService;
 import de.bs14.lf8.Service.RankingService;
+import de.bs14.lf8.model.Player;
 import de.bs14.lf8.model.Question;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -16,7 +17,7 @@ public class TrainingMode implements GameMode { //ToDO: Kein Zeitlimit, Keine Pu
   RankingService rankingService;
 
   @Override
-  public void startGameMode(CountdownThreadService countdownThreadService, InputReaderService inputReaderService,
+  public void startGameModeRound(Player currentPlayer, InputReaderService inputReaderService,
       QuestionReaderService questionReaderService) {
 
   }
@@ -27,8 +28,9 @@ public class TrainingMode implements GameMode { //ToDO: Kein Zeitlimit, Keine Pu
   }
 
   @Override
-  public void getQuestion() {
+  public Question getQuestion() {
     questionReaderService.printQuestionOfCategoryPool();
 
+    return null;
   }
 }

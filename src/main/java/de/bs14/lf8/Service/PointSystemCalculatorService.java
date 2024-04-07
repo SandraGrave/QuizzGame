@@ -15,16 +15,17 @@ public class PointSystemCalculatorService {
     private final PlayerRepository playerRepository;
 
     @Transactional
-    public void calculatePoints(Player player, Question question, String playerAnswer){
-        int playerPoints = player.getRankingPoints();
+    public void setCalculatedPoints(Player player, Question question, String playerAnswer) {
+      int playerPoints = player.getRankingPoints();
 
-        if(questionReaderService.isPlayerAnswerRight(question, playerAnswer)){
-            int newPlayerPoints = playerPoints + 1;
-            player.setRankingPoints(newPlayerPoints);
-            playerRepository.save(player);
+      if (questionReaderService.isPlayerAnswerRight(question, playerAnswer)) {
+        int newPlayerPoints = playerPoints + 1;
+        player.setRankingPoints(newPlayerPoints);
+        playerRepository.save(player);
+        System.out.println("Du erhältst einen Punkt!");
 
 
-        }
+      }
 
     }
 }
