@@ -1,5 +1,6 @@
 package de.bs14.lf8.Service;
 
+import de.bs14.lf8.Controller.MutliplayerMode;
 import de.bs14.lf8.Controller.SoloMode;
 import de.bs14.lf8.Controller.TrainingMode;
 import de.bs14.lf8.model.Player;
@@ -18,6 +19,8 @@ public class GameModeMenu {
   private final PlayerRepository playerRepository;
   private final SoloMode soloMode;
   private final TrainingMode trainingMode;
+  private final MutliplayerMode multiplayerMode;
+
 
   public void chooseGameMode() {
 
@@ -47,8 +50,9 @@ public class GameModeMenu {
           soloMode.endGame();
           x = false;
           break;
+
         case "2":
-          System.out.println("Willkommen zum Training-Mode" + nextLine + "Das Spiel startet bald");
+          System.out.println("Willkommen zum Training-Mode" + nextLine + "Das Spiel startet!");
           Player currentTrainingPlayer = playerReaderService.findCurrentPlayer(playerRepository);
           for (int i = 0; i <= 2; i++) {
             trainingMode.startGameModeRound(currentTrainingPlayer, inputReaderService, questionReaderService);
@@ -56,12 +60,27 @@ public class GameModeMenu {
           trainingMode.endGame();
           x = false;
           break;
+
         case "3":
-          System.out.println("Willkommen zum Multiplayer-Mode" + nextLine + "Das Spiel startet bald.");
+          System.out.println("Willkommen zum Multiplayer-Mode" + nextLine + "Das Spiel startet!");
+          Player multiplayerOne = playerReaderService.findCurrentPlayer(playerRepository);
+          for (int i = 0; i <= 2; i++) {
+            multiplayerMode.startGameModeRound(multiplayerOne, inputReaderService, questionReaderService);
+          }
+          System.out.println("Spielerwechsel steht an!");
+          Player multiplayerTwo = playerReaderService.findCurrentPlayer(playerRepository);
+          for (int i = 0; i <= 2; i++) {
+            multiplayerMode.startGameModeRound(multiplayerTwo, inputReaderService, questionReaderService);
+          }
+          multiplayerMode.identifyWinner(); //Todo: Wer hat gewonnen?
+          multiplayerMode.endGame();
+          x = false;
           break;
+
         case "4":
           System.out.println("Zurück zum Main-Menü");
           x = false;
+
         default:
           System.out.println("Ungültige Eingabe " + s);
           break;
