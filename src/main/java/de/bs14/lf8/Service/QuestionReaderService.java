@@ -19,13 +19,27 @@ public class QuestionReaderService {
   private final InputReaderService inputReaderService;
   private final CategoryRepository categoryRepository;
 
+
+  public Question printQuestionOfWholePool() {
+    List<Question> questionList = getAllQuestions(questionRepository);
+    Question randomQuestion = getRandomQuestion(questionList);
+    printQuestion(randomQuestion);
+    return randomQuestion;
+  }
+
   public List<Question> getAllQuestions(QuestionRepository questionRepository) {
     return (List<Question>) questionRepository.findAll();
   }
 
+  public Question printQuestionOfCategoryPool(int wantedCategoryAsLong) {
+    List<Question> questionsSpecificCategoryList = getQuestionsByCategoryList(wantedCategoryAsLong);
+    Question randomQuestion = getRandomQuestion(questionsSpecificCategoryList);
+    printQuestion(randomQuestion);
+    return randomQuestion;
+  }
 
-  public List<Question> getQuestionsByCategoryList() {
-    long wantedCategoryAsLong = chooseCategoryOption();
+
+  public List<Question> getQuestionsByCategoryList(int wantedCategoryAsLong) {
     return questionRepository.findQuestionsByCategory(wantedCategoryAsLong);
   }
 
@@ -38,6 +52,7 @@ public class QuestionReaderService {
 
 
   public void printQuestion(Question question) {
+    System.out.println("---------------------------------------------------");
     System.out.println("Frage: " + question.getQuestionStatement());
     System.out.println("Antwort " + question.getAnswerOptionA());
     System.out.println("Antwort " + question.getAnswerOptionB());
@@ -45,9 +60,16 @@ public class QuestionReaderService {
     System.out.println("Antwort " + question.getAnswerOptionD());
   }
 
-  private Long chooseCategoryOption() {
+  public int chooseCategoryOption() {
     String nextLine = System.lineSeparator();
     System.out.println("Wähle eine der folgenden Kategorien indem du die entsprechende Nummer eingibst und mit Enter bestätigst");
+    showCategories(nextLine);
+
+    String wantedCategory = inputReaderService.readInput();
+    return Integer.parseInt(wantedCategory);
+  }
+
+  public void showCategories(String nextLine) {
     List<Category> allCategories = (List<Category>) categoryRepository.findAll();
     String categoryFormat = " %-9s | %-4s ";
     System.out.printf(categoryFormat, "CategoryId", "CategoryName" + nextLine);
@@ -55,9 +77,6 @@ public class QuestionReaderService {
     for (Category category : allCategories) {
       System.out.printf(categoryFormat, category.getCategoryId(), category.getCategoryName() + nextLine);
     }
-
-    String wantedCategory = inputReaderService.readInput();
-    return Long.parseLong(wantedCategory);
   }
 
   public boolean isPlayerAnswerRight(Question question, String playerAnswer) {

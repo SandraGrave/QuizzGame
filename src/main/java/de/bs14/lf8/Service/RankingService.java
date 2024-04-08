@@ -56,7 +56,8 @@ public class RankingService {
     }
 
   }
-  public void setRankingTitle(Player player){
+
+  public void setCalculatedRankingTitle(Player player) {
     int rankingPoints = player.getRankingPoints();
 
     if (rankingPoints >= 120) {
