@@ -16,6 +16,7 @@ class PointSystemCalculatorServiceTest {
     PlayerRepository playerRepositoryMock = Mockito.mock(PlayerRepository.class);
     InputReaderService inputReaderServiceMock = Mockito.mock(InputReaderService.class);
     CategoryRepository categoryRepository = Mockito.mock(CategoryRepository.class);
+    CountdownThreadService countdownThreadService = Mockito.mock(CountdownThreadService.class);
 
 
     Question question = new Question(2, 1, "Test Question", "answerOptionA", "answerOptionB", "answerOptionC", "answerOptionD", "A");
