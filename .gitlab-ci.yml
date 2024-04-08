@@ -16,7 +16,6 @@ test:
   script:
     - mvn test
     - echo "maven test done"
-    - touch surefire-reports.xml
   artifacts:
     when: always
     paths:
@@ -27,7 +26,6 @@ checkstyle:
   stage: checkstyle
   script:
     - mvn checkstyle:checkstyle
-    - touch checkstyle-result.xml
   artifacts:
     paths:
       - checkstyle-result.xml
