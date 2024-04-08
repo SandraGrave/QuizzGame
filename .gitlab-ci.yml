@@ -25,7 +25,7 @@ test:
   stage: test
   extends: .some_script
   script:
-    mvn surefire:test -Dcheckstyle.output.file=surefire-resports.xml > surefire-reports.xml
+    - mvn surefire:test -Dcheckstyle.output.file=surefire-resports.xml
   artifacts:
     when: always
     paths:
