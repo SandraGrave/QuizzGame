@@ -18,7 +18,6 @@ public class QuestionReaderService {
   private final QuestionRepository questionRepository;
   private final InputReaderService inputReaderService;
   private final CategoryRepository categoryRepository;
-  private final String nextLine = System.lineSeparator();
 
 
   public Question printQuestionOfWholePool() {
@@ -28,20 +27,19 @@ public class QuestionReaderService {
     return randomQuestion;
   }
 
-  public Question printQuestionOfCategoryPool() {
-    List<Question> questionsSpecificCategoryList = getQuestionsByCategoryList();
+  public List<Question> getAllQuestions(QuestionRepository questionRepository) {
+    return (List<Question>) questionRepository.findAll();
+  }
+
+  public Question printQuestionOfCategoryPool(int wantedCategoryAsLong) {
+    List<Question> questionsSpecificCategoryList = getQuestionsByCategoryList(wantedCategoryAsLong);
     Question randomQuestion = getRandomQuestion(questionsSpecificCategoryList);
     printQuestion(randomQuestion);
     return randomQuestion;
   }
 
-  public List<Question> getAllQuestions(QuestionRepository questionRepository) {
-    return (List<Question>) questionRepository.findAll();
-  }
 
-
-  public List<Question> getQuestionsByCategoryList() {
-    long wantedCategoryAsLong = chooseCategoryOption();
+  public List<Question> getQuestionsByCategoryList(int wantedCategoryAsLong) {
     return questionRepository.findQuestionsByCategory(wantedCategoryAsLong);
   }
 
@@ -63,7 +61,7 @@ public class QuestionReaderService {
   }
 
   private int chooseCategoryOption() {
-
+    String nextLine = System.lineSeparator();
     System.out.println("Wähle eine der folgenden Kategorien indem du die entsprechende Nummer eingibst und mit Enter bestätigst");
     showCategories(nextLine);
 

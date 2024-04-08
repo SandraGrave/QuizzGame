@@ -15,16 +15,17 @@ class PointSystemCalculatorServiceTest {
     QuestionRepository questionRepositoryMock = Mockito.mock(QuestionRepository.class);
     PlayerRepository playerRepositoryMock = Mockito.mock(PlayerRepository.class);
     InputReaderService inputReaderServiceMock = Mockito.mock(InputReaderService.class);
-    CategoryRepository categoryRepositoryMock = Mockito.mock(CategoryRepository.class);
-    CountdownThreadService countdownThreadServiceMock = Mockito.mock(CountdownThreadService.class);
+    CategoryRepository categoryRepository = Mockito.mock(CategoryRepository.class);
+    CountdownThreadService countdownThreadService = Mockito.mock(CountdownThreadService.class);
 
 
     Question question = new Question(2, 1, "Test Question", "answerOptionA", "answerOptionB", "answerOptionC", "answerOptionD", "A");
     Player player = new Player("TestPlayer2", "123");
 
     private final QuestionReaderService questionReaderService = new QuestionReaderService(questionRepositoryMock, inputReaderServiceMock,
-            categoryRepositoryMock);
-    private final PointSystemCalculatorService pointSystemCalculatorService = new PointSystemCalculatorService(questionReaderService, countdownThreadServiceMock);
+        categoryRepository);
+    private final PointSystemCalculatorService pointSystemCalculatorService = new PointSystemCalculatorService(playerRepositoryMock,
+        countdownThreadService);
 
     @Test
     void testWhenCalculatePointsThenIncrementPoints() {
@@ -40,4 +41,5 @@ class PointSystemCalculatorServiceTest {
 
     //ToDO: Test, dass Punkt erhöht, wenn schon ein Puknt vorhanden ist (Sollte dan 2 Pkt sein)
 
+    
 }
