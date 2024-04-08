@@ -25,11 +25,11 @@ test:
   stage: test
   extends: .some_script
   script:
-    - mvn surefire:test -Dsurefire.reportFormat=xml -DoutputFile=surefire-reports.xml
+    - mvn surefire:test
   artifacts:
     when: always
     paths:
-      - surefire-reports.xml
+      - surefire-reports
     expire_in: "30 days"
 
 checkstyle:
