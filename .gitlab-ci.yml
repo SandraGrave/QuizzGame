@@ -8,13 +8,11 @@ stages:
 .some_script:
   before_script:
     - echo "Erstellt Datei"
-    - ls -l
     - touch surefire-reports
 
 .some_script2:
   before_script:
     - echo "Erstellt Datei"
-    - ls -l
     - touch checkstyle-result.xml
 
 build:
@@ -28,6 +26,7 @@ test:
   extends: .some_script
   script:
     - mvn test
+    - ls -l
   artifacts:
     when: always
     paths:
@@ -40,6 +39,7 @@ checkstyle:
   script:
     - mvn checkstyle:checkstyle
     - ls -l
+    - ls -l target
   artifacts:
     paths:
       - checkstyle-result.xml
