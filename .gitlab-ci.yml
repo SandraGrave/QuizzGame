@@ -36,8 +36,7 @@ checkstyle:
   stage: checkstyle
   extends: .some_script2
   script:
-    - mvn checkstyle:checkstyle
-    - ls -l target/surefire-reports.xml
+    - mvn checkstyle:checkstyle >> checkstyle-result.xml
   artifacts:
     paths:
       - checkstyle-result.xml
