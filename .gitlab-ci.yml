@@ -27,7 +27,7 @@ test:
   script:
     - mvn test
     - ls -l
-    - cp surefire-reports.xml $CI_PROJECT_DIR/artifacts/surefire-reports.xml
+    - cp surefire-reports.xml $CI_PROJECT_DIR/surefire-reports.xml
   artifacts:
     when: always
     paths:
@@ -40,7 +40,7 @@ checkstyle:
   script:
     - mvn checkstyle:checkstyle
     - ls -l
-    - cp checkstyle.xml $CI_PROJECT_DIR/artifacts/checkstyle.xml
+    - cp checkstyle.xml $CI_PROJECT_DIR/checkstyle.xml
   artifacts:
     paths:
       - checkstyle-result.xml
