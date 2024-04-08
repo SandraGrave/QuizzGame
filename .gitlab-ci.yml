@@ -5,26 +5,48 @@ image: maven:latest
 stages:
   - build
   - test
-  - pmd
+  - checkstyle
+
+
+.some_script:
+  before_script:
+    - echo "erstellt Datei"
+    - touch surefire-reports.xml
+
+.some_script2:
+  before_script:
+    - echo "erstellt Datei"
+    - touch checkstyle-result.txt
+
 build:
   stage: build
   script:
     - echo "Aufbau der Dockerumgebung"
     - mvn compile
+  only:
+    - branches
+  except:
+    - main
+
 test:
   stage: test
+  extends: .some_script
   script:
     - mvn test
     - echo "maven test done"
-    - touch surefire-reports.xml
   artifacts:
     when: always
     paths:
       - surefire-reports.xml
-    reports:
-      junit: surefire-reports.xml
+    expire_in: "30 days"
 
-pmd:
-  stage: pmd
+checkstyle:
+  stage: checkstyle
+  extends: .some_script2
   script:
-    - mvn pmd:check || true
+    - mvn checkstyle:checkstyle
+  artifacts:
+    paths:
+      - checkstyle-result.txt
+    expire_in: "1 week"
+  allow_failure: true
