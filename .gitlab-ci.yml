@@ -25,7 +25,7 @@ test:
   stage: test
   extends: .some_script
   script:
-    - mvn test
+    - mvn test >> surefire-reports.xml
   artifacts:
     when: always
     paths:
