@@ -79,6 +79,13 @@
             <redirectTestOutputToFile>true</redirectTestOutputToFile>
             <printSummary>true</printSummary>
             <redirectTestOutputToFile>true</redirectTestOutputToFile>
+            <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
+                <properties>
+                    <property>
+                        <name>surefire.junit.reportName</name>
+                        <value>surefire-results.xml</value>
+                    </property>
+                </properties>
         </configuration>
     </plugin>
 
