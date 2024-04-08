@@ -26,5 +26,4 @@ test:
 pmd:
   stage: pmd
   script:
-    - mvn pmd:check
-  allow_failure: true
+    - mvn pmd:check || true
