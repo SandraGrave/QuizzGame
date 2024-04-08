@@ -77,7 +77,8 @@
         <configuration>
             <testFailureIgnore>false</testFailureIgnore>
             <redirectTestOutputToFile>true</redirectTestOutputToFile>
-            <outputFileFormat>xml</outputFileFormat>
+            <printSummary>true</printSummary>
+            <redirectTestOutputToFile>true</redirectTestOutputToFile>
         </configuration>
     </plugin>
 
