@@ -14,14 +14,9 @@ build:
 test:
   stage: test
   script:
-    - mvn test
-    - echo "maven test done"
     - touch surefire-reports.xml
-  artifacts:
-    when: always
-    paths:
-      - surefire-reports.xml
-    expire_in: "30 days"
+    - mvn test > surefire-reports.xml
+    - echo "maven test done"
 
 pmd:
   stage: pmd
