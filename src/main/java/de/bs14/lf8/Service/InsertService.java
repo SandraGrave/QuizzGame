@@ -10,6 +10,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Scanner;
+
 @RequiredArgsConstructor
 @Service
 public class InsertService {
@@ -17,6 +19,9 @@ public class InsertService {
   private final QuestionRepository questionRepository;
   private final CategoryRepository categoryRepository;
   private final PlayerRepository playerRepository;
+  private final InputReaderService inputReaderService;
+  private final QuestionReaderService questionReaderService;
+  private final String nextLine = System.lineSeparator();
 
   @Transactional
   public void createInserts() {
@@ -192,6 +197,55 @@ public class InsertService {
 
     playerRepository.save(new Player("TestPlayer", "pwTest"));
     playerRepository.save(new Player("TestPlayer2", "pwTest2"));
+  }
+  public void newInsertQuestion(){
+
+    System.out.println("Bitte gib die Kategorie-ID ein:");
+    questionReaderService.showCategories(nextLine);
+    String categoryId = inputReaderService.readInput();
+    int categoryIdAsInt = Integer.parseInt(categoryId);
+
+
+    Category category = categoryRepository.findById(categoryIdAsInt).orElse(null);
+
+    if (category == null) {
+      System.out.println("Kategorie nicht gefunden!");
+      return;
+    }
+
+    System.out.println("Bitte gib die Schwierigkeit der Frage ein: ");
+    System.out.println("1 - einfach");
+    System.out.println("2 - mittel");
+    System.out.println("3 - schwer");
+    String difficulty = inputReaderService.readInput();
+    int difficultyAsInt = Integer.parseInt(difficulty);
+
+    System.out.println("Bitte gib die Frage ein:");
+    String questionStatement = inputReaderService.readInput();
+
+    System.out.println("Bitte gib die Antwortoption A ein:");
+    String answerOptionA = inputReaderService.readInput();
+
+    System.out.println("Bitte gib die Antwortoption B ein:");
+    String answerOptionB = inputReaderService.readInput();
+
+    System.out.println("Bitte gib die Antwortoption C ein:");
+    String answerOptionC = inputReaderService.readInput();
+
+    System.out.println("Bitte gib die Antwortoption D ein:");
+    String answerOptionD = inputReaderService.readInput();
+
+    System.out.println("Bitte gib die richtige Antwort ein:");
+    System.out.println("A,B,C oder D");
+    String rightAnswer = inputReaderService.readInput();
+
+
+    Question question = new Question(categoryIdAsInt, difficultyAsInt, questionStatement, answerOptionA,
+            answerOptionB, answerOptionC, answerOptionD, rightAnswer);
+
+    questionRepository.save(question);
+
+    System.out.println("Die Frage wurde erfolgreich hinzugefügt!");
   }
 }
 

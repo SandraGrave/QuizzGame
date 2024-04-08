@@ -12,8 +12,6 @@ import org.springframework.stereotype.Service;
 public class PointSystemCalculatorService {
 
   private final PlayerRepository playerRepository;
-  private final CountdownThreadService countdownThreadService;
-
 
   public int calculatePoints(Player player){
     int playerPoints = player.getRankingPoints();
@@ -22,16 +20,16 @@ public class PointSystemCalculatorService {
 
   @Transactional
   public void setCalculatedPoints(Player player) {
-   int newPlayerPoints = calculatePoints(player);
+    int newPlayerPoints = calculatePoints(player);
     player.setRankingPoints(newPlayerPoints);
     playerRepository.save(player);
     System.out.println("Du erhältst einen Punkt!");
   }
-@Transactional
-  public void setCalculatedExtraPoints(Player player) {
-    int remainingTime = countdownThreadService.getRemainingTime();
 
+  @Transactional
+  public void setCalculatedExtraPoints(Player player, int remainingTime) {
     if (remainingTime >= 15) {
+      System.out.println("remainingTime= " + remainingTime);
       int newPlayerPoints = calculatePoints(player);
       player.setRankingPoints(newPlayerPoints);
       playerRepository.save(player);

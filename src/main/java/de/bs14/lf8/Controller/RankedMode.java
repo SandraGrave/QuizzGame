@@ -30,10 +30,11 @@ public class RankedMode implements GameMode { //gegen Zeit, Punkte sammeln mögl
     Question question = getQuestion();
     countdownThreadService.start();
     String playerAnswer = inputReaderService.readInputWithTimeLimit(countdownThreadService);
+    int remainingTime = countdownThreadService.getRemainingTime();
     countdownThreadService.stopCountdown();
     if (questionReaderService.isPlayerAnswerRight(question, playerAnswer)) {
       pointSystemCalculatorService.setCalculatedPoints(currentPlayer);
-      pointSystemCalculatorService.setCalculatedExtraPoints(currentPlayer);
+      pointSystemCalculatorService.setCalculatedExtraPoints(currentPlayer, remainingTime);
       rankingService.setCalculatedRankingTitle(currentPlayer);
       addToRoundPointMap(currentPlayer);
     }
