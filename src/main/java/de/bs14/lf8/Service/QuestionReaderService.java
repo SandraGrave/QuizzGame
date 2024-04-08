@@ -60,7 +60,7 @@ public class QuestionReaderService {
     System.out.println("Antwort " + question.getAnswerOptionD());
   }
 
-  private int chooseCategoryOption() {
+  public int chooseCategoryOption() {
     String nextLine = System.lineSeparator();
     System.out.println("Wähle eine der folgenden Kategorien indem du die entsprechende Nummer eingibst und mit Enter bestätigst");
     showCategories(nextLine);
