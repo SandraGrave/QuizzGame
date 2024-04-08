@@ -8,12 +8,12 @@ stages:
 .some_script:
   before_script:
     - echo "Erstellt Datei"
-    #- touch surefire-reports.xml
+    - touch surefire-reports2.xml
 
 .some_script2:
   before_script:
     - echo "Erstellt Datei"
-    #- touch checkstyle-result.xml
+    - touch checkstyle-result2.xml
 
 build:
   stage: build
@@ -27,11 +27,12 @@ test:
   script:
     - mvn test
     - ls -l
-    - cp surefire-reports.xml $CI_PROJECT_DIR/surefire-reports.xml
+    - sleep 5
+    - cp surefire-reports.xml checkstyle-result2.xml
   artifacts:
     when: always
     paths:
-      - surefire-reports.xml
+      - surefire-reports2.xml
     expire_in: "30 days"
 
 checkstyle:
@@ -40,9 +41,10 @@ checkstyle:
   script:
     - mvn checkstyle:checkstyle
     - ls -l
-    - cp checkstyle.xml $CI_PROJECT_DIR/checkstyle.xml
+    - sleep 5
+    - cp checkstyle-result.xml checkstyle-result2.xml
   artifacts:
     paths:
-      - checkstyle-result.xml
+      - checkstyle-result2.xml
     expire_in: "1 week"
   allow_failure: true
