@@ -41,4 +41,5 @@ class PointSystemCalculatorServiceTest {
 
     //ToDO: Test, dass Punkt erhöht, wenn schon ein Puknt vorhanden ist (Sollte dan 2 Pkt sein)
 
+    
 }
