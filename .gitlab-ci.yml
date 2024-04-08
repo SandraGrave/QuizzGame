@@ -25,12 +25,11 @@ test:
   stage: test
   extends: .some_script
   script:
-    - mvn surefire:test
-    - sleep 10
+    mvn surefire:test -Dcheckstyle.output.file=checkstyle-result.xml > surefire-reports.xml
   artifacts:
     when: always
     paths:
-      - surefire-reports.xml
+      - surefire-reports.log
     expire_in: "30 days"
 
 checkstyle:
