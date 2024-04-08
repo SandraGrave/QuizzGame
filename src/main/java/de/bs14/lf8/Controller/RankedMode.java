@@ -34,15 +34,18 @@ public class RankedMode implements GameMode { //gegen Zeit, Punkte sammeln mögl
     countdownThreadService.stopCountdown();
     if (questionReaderService.isPlayerAnswerRight(question, playerAnswer)) {
       pointSystemCalculatorService.setCalculatedPoints(currentPlayer);
-      pointSystemCalculatorService.setCalculatedExtraPoints(currentPlayer, remainingTime);
-      rankingService.setCalculatedRankingTitle(currentPlayer);
       addToRoundPointMap(currentPlayer);
+      if (pointSystemCalculatorService.setCalculatedExtraPoints(currentPlayer, remainingTime)) {
+        addToRoundPointMap(currentPlayer);
+      }
+      rankingService.setCalculatedRankingTitle(currentPlayer);
     }
   }
 
   private void addToRoundPointMap(Player currentPlayer) {
     Integer currentCorrectAnswers = roundPointsMap.get(currentPlayer.getPlayerId());
     roundPointsMap.put(currentPlayer.getPlayerId(), currentCorrectAnswers + 1);
+
   }
 
 
@@ -52,17 +55,26 @@ public class RankedMode implements GameMode { //gegen Zeit, Punkte sammeln mögl
 
   }
 
-  public void identifyWinner(Player multiplayerOne, Player multiplayerTwo) { //Todo: Wie berechne ich die Punkte, die erspielt wurden
+  public void identifyWinner(Player multiplayerOne, Player multiplayerTwo) {
     Integer roundPointsPlayerOne = roundPointsMap.get(multiplayerOne.getPlayerId());
     Integer roundPointsPlayerTwo = roundPointsMap.get(multiplayerTwo.getPlayerId());
 
-    System.out.println(multiplayerOne.getPlayerName() + " hat " + roundPointsPlayerOne + " Punkte erspielt.");
-    System.out.println(multiplayerTwo.getPlayerName() + " hat " + roundPointsPlayerTwo + " Punkte erspielt.");
+    String playerOneName = multiplayerOne.getPlayerName();
+    String playerTwoName = multiplayerTwo.getPlayerName();
 
-    //TODO: IF oder Compare Sieger, Verlierer, Gleichstand
-    //TODO: Map testen!
-    //Todo: Somit hat SPIELERNAME gewonnen. Herzlichen Glückwunsch!
+    System.out.println(playerOneName + " hat " + roundPointsPlayerOne + " Punkte erspielt.");
+    System.out.println(playerTwoName + " hat " + roundPointsPlayerTwo + " Punkte erspielt.");
 
+    if (roundPointsPlayerOne > roundPointsPlayerTwo) {
+      System.out.println(playerOneName + " hat gewonnen!");
+    }
+    if (roundPointsPlayerOne.equals(roundPointsPlayerTwo)) {
+      System.out.println("Es ist Gleichstand!");
+    }
+    if (roundPointsPlayerOne < roundPointsPlayerTwo) {
+      System.out.println(playerTwoName + " hat gewonnen!");
+    }
+    roundPointsMap.clear();
   }
 
 }

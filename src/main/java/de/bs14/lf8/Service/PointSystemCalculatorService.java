@@ -27,13 +27,14 @@ public class PointSystemCalculatorService {
   }
 
   @Transactional
-  public void setCalculatedExtraPoints(Player player, int remainingTime) {
+  public boolean setCalculatedExtraPoints(Player player, int remainingTime) {
     if (remainingTime >= 15) {
-      System.out.println("remainingTime= " + remainingTime);
       int newPlayerPoints = calculatePoints(player);
       player.setRankingPoints(newPlayerPoints);
       playerRepository.save(player);
       System.out.println("Du erhältst einen Zeit-Bonus-Punkt!");
+      return true;
     }
+    return false;
   }
 }
