@@ -27,7 +27,7 @@ test:
   script:
     - mvn test
     - ls -l
-    - mv target/surefire-reports.xml surefire-reports.xml
+    - mv surefire-reports.xml surefire-reports.xml
   artifacts:
     when: always
     paths:
@@ -41,7 +41,7 @@ checkstyle:
     - mvn checkstyle:checkstyle
     - ls -l
     - ls -l target
-    - mv target/checkstyle-result.xml checkstyle-result.xml
+    - mv checkstyle-result.xml checkstyle-result.xml
   artifacts:
     paths:
       - checkstyle-result.xml
