@@ -28,7 +28,7 @@ test:
     - mvn test
     - ls -l
     - sleep 5
-    - cp surefire-reports.xml checkstyle-result2.xml
+    - cp target/surefire-reports.xml checkstyle-result2.xml
   artifacts:
     when: always
     paths:
@@ -42,7 +42,7 @@ checkstyle:
     - mvn checkstyle:checkstyle
     - ls -l
     - sleep 5
-    - cp checkstyle-result.xml checkstyle-result2.xml
+    - cp target/checkstyle-result.xml checkstyle-result2.xml
   artifacts:
     paths:
       - checkstyle-result2.xml
