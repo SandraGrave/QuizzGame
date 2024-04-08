@@ -43,7 +43,7 @@ checkstyle:
     - mvn checkstyle:checkstyle
   artifacts:
     paths:
-      - checkstyle-result.xml
+      - target/checkstyle-result.xml
     expire_in: "1 week"
   allow_failure: true
 
