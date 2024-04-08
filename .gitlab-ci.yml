@@ -29,6 +29,7 @@ test:
   extends: .some_script
   script:
     - mvn test
+    - mvn validate
     - echo "maven test done"
   artifacts:
     when: always
@@ -41,9 +42,5 @@ checkstyle:
   extends: .some_script2
   script:
     - mvn checkstyle:checkstyle
-  artifacts:
-    paths:
-      - checkstyle-result.xml
-    expire_in: "1 week"
   allow_failure: true
 
