@@ -24,9 +24,15 @@ public class TrainingMode implements GameMode {
   }
 
   @Override
+  public void endGame(RankingService rankingService) {
+    GameMode.super.endGame(rankingService);
+    wantedCategory = 0;
+  }
+
+  @Override
   public Question getQuestion() {
     if (wantedCategory == 0) {
-      questionReaderService.chooseCategoryOption();
+      wantedCategory = questionReaderService.chooseCategoryOption();
     }
     return questionReaderService.printQuestionOfCategoryPool(wantedCategory);
   }
