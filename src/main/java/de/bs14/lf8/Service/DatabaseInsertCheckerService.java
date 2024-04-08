@@ -20,7 +20,6 @@ public class DatabaseInsertCheckerService {
 
   }
   private boolean isDatabaseEmtpy() {
-    //return questionRepository.count() == 0 || categoryRepository.count() == 0;
     if (questionRepository.count() == 0 || categoryRepository.count() == 0 ) {
       return true;
     } return false;

@@ -15,16 +15,16 @@ class PointSystemCalculatorServiceTest {
     QuestionRepository questionRepositoryMock = Mockito.mock(QuestionRepository.class);
     PlayerRepository playerRepositoryMock = Mockito.mock(PlayerRepository.class);
     InputReaderService inputReaderServiceMock = Mockito.mock(InputReaderService.class);
-    CategoryRepository categoryRepository = Mockito.mock(CategoryRepository.class);
+    CategoryRepository categoryRepositoryMock = Mockito.mock(CategoryRepository.class);
+    CountdownThreadService countdownThreadServiceMock = Mockito.mock(CountdownThreadService.class);
 
 
     Question question = new Question(2, 1, "Test Question", "answerOptionA", "answerOptionB", "answerOptionC", "answerOptionD", "A");
     Player player = new Player("TestPlayer2", "123");
 
     private final QuestionReaderService questionReaderService = new QuestionReaderService(questionRepositoryMock, inputReaderServiceMock,
-        categoryRepository);
-    private final PointSystemCalculatorService pointSystemCalculatorService = new PointSystemCalculatorService(questionReaderService,
-        playerRepositoryMock);
+            categoryRepositoryMock);
+    private final PointSystemCalculatorService pointSystemCalculatorService = new PointSystemCalculatorService(questionReaderService, countdownThreadServiceMock);
 
     @Test
     void testWhenCalculatePointsThenIncrementPoints() {

@@ -18,6 +18,7 @@ public class QuestionReaderService {
   private final QuestionRepository questionRepository;
   private final InputReaderService inputReaderService;
   private final CategoryRepository categoryRepository;
+  private final String nextLine = System.lineSeparator();
 
 
   public Question printQuestionOfWholePool() {
@@ -61,9 +62,16 @@ public class QuestionReaderService {
     System.out.println("Antwort " + question.getAnswerOptionD());
   }
 
-  private Long chooseCategoryOption() {
-    String nextLine = System.lineSeparator();
+  private int chooseCategoryOption() {
+
     System.out.println("Wähle eine der folgenden Kategorien indem du die entsprechende Nummer eingibst und mit Enter bestätigst");
+    showCategories(nextLine);
+
+    String wantedCategory = inputReaderService.readInput();
+    return Integer.parseInt(wantedCategory);
+  }
+
+  public void showCategories(String nextLine) {
     List<Category> allCategories = (List<Category>) categoryRepository.findAll();
     String categoryFormat = " %-9s | %-4s ";
     System.out.printf(categoryFormat, "CategoryId", "CategoryName" + nextLine);
@@ -71,9 +79,6 @@ public class QuestionReaderService {
     for (Category category : allCategories) {
       System.out.printf(categoryFormat, category.getCategoryId(), category.getCategoryName() + nextLine);
     }
-
-    String wantedCategory = inputReaderService.readInput();
-    return Long.parseLong(wantedCategory);
   }
 
   public boolean isPlayerAnswerRight(Question question, String playerAnswer) {
