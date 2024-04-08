@@ -8,12 +8,12 @@ stages:
 .some_script:
   before_script:
     - echo "Erstellt Datei"
-    - touch surefire-reports.xml
+    #- touch surefire-reports.xml
 
 .some_script2:
   before_script:
     - echo "Erstellt Datei"
-    - touch checkstyle-result.xml
+    #- touch checkstyle-result.xml
 
 build:
   stage: build
