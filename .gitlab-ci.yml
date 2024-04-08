@@ -8,7 +8,7 @@ stages:
 .some_script:
   before_script:
     - echo "Erstellt Datei"
-    - touch surefire-reports
+    - touch surefire-reports.xml
 
 .some_script2:
   before_script:
