@@ -25,7 +25,7 @@ test:
   stage: test
   extends: .some_script
   script:
-    - mvn test -Dsurefire.reportFormat=xml --batch-mode > surefire-reports.xml
+    - mvn test -Dsurefire.reportFormat=xml --batch-mode -ntp > surefire-reports.xml
   artifacts:
     when: always
     paths:
