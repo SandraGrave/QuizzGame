@@ -27,10 +27,11 @@ test:
   script:
     - mvn test
     - ls -l
+    - mv target/surefire-reports.xml surefire-reports.xml
   artifacts:
     when: always
     paths:
-      - mv target/surefire-reports.xml surefire-reports.xml
+      - surefire-reports.xml
     expire_in: "30 days"
 
 checkstyle:
@@ -40,8 +41,9 @@ checkstyle:
     - mvn checkstyle:checkstyle
     - ls -l
     - ls -l target
+    - mv target/checkstyle-result.xml checkstyle-result.xml
   artifacts:
     paths:
-      - mv target/checkstyle-result.xml checkstyle-result.xml
+      - checkstyle-result.xml
     expire_in: "1 week"
   allow_failure: true
