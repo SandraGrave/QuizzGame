@@ -23,11 +23,6 @@ build:
   script:
     - echo "Aufbau der Dockerumgebung"
     - mvn compile
-  only:
-    - branches
-  except:
-    - main
-
 test:
   stage: test
   extends: .some_script
