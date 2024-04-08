@@ -5,7 +5,7 @@ image: maven:latest
 stages:
   - build
   - test
-  - checkstyle
+  - pmd
 build:
   stage: build
   script:
@@ -23,13 +23,8 @@ test:
       - surefire-reports.xml
     expire_in: "30 days"
 
-checkstyle:
+pmd:
   stage: checkstyle
   script:
-    - mvn checkstyle:checkstyle
-    - touch checkstyle-result.xml
-  artifacts:
-    paths:
-      - checkstyle-result.xml
-    expire_in: "1 week"
+    - mvn pmd:check
   allow_failure: true
