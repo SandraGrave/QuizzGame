@@ -30,14 +30,11 @@ test:
   script:
     - mvn test
     - echo "maven test done"
-    - sleep 5
-    - mvn validate
-    - mvn site
-  
+
   artifacts:
     when: always
     paths:
-      - surefire-reports.xml
+      - report/surefire-reports.xml
     expire_in: "30 days"
 
 checkstyle:
@@ -47,7 +44,7 @@ checkstyle:
     - mvn checkstyle:checkstyle
   artifacts:
     paths:
-      - checkstyle-result.xml
+      - report/checkstyle-result.xml
     expire_in: "1 week"
   allow_failure: true
 
