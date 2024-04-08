@@ -16,7 +16,7 @@ test:
   script:
     - touch surefire-reports.xml
     - mvn test
-    - echo "maven test done"
+    - echo "maven test done" > surefire-reports.xml
   artifacts:
     paths:
       - surefire-reports.xml
