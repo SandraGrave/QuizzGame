@@ -41,10 +41,9 @@ checkstyle:
   extends: .some_script2
   script:
     - mvn checkstyle:checkstyle
-    - mvn clean verify
   artifacts:
-    when: always
     paths:
       - checkstyle-result.xml
     expire_in: "1 week"
   allow_failure: true
+
