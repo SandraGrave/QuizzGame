@@ -35,7 +35,7 @@ public class PointSystemCalculatorService {
       int newPlayerPoints = calculatePoints(player);
       player.setRankingPoints(newPlayerPoints);
       playerRepository.save(player);
-      System.out.println("Du erhältst einen Bonus-Punkt!");
+      System.out.println("Du erhältst einen Zeit-Bonus-Punkt!");
     }
   }
 }

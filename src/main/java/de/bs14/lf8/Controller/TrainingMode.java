@@ -14,6 +14,7 @@ import org.springframework.stereotype.Component;
 public class TrainingMode implements GameMode {
 
   private final QuestionReaderService questionReaderService;
+  private int wantedCategory = 0;
 
   @Override
   public void startGameModeRound(Player currentPlayer, InputReaderService inputReaderService, QuestionReaderService questionReaderService) {
@@ -24,6 +25,9 @@ public class TrainingMode implements GameMode {
 
   @Override
   public Question getQuestion() {
-    return questionReaderService.printQuestionOfCategoryPool();
+    if (wantedCategory == 0) {
+      questionReaderService.chooseCategoryOption();
+    }
+    return questionReaderService.printQuestionOfCategoryPool(wantedCategory);
   }
 }

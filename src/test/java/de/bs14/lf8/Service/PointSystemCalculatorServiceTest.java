@@ -24,8 +24,8 @@ class PointSystemCalculatorServiceTest {
 
     private final QuestionReaderService questionReaderService = new QuestionReaderService(questionRepositoryMock, inputReaderServiceMock,
         categoryRepository);
-    private final PointSystemCalculatorService pointSystemCalculatorService = new PointSystemCalculatorService(questionReaderService,
-        playerRepositoryMock);
+    private final PointSystemCalculatorService pointSystemCalculatorService = new PointSystemCalculatorService(playerRepositoryMock,
+        countdownThreadService);
 
     @Test
     void testWhenCalculatePointsThenIncrementPoints() {
