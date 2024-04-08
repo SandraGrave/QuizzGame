@@ -29,12 +29,12 @@ test:
   extends: .some_script
   script:
     - mvn test
-    - echo "maven test done"
+    - echo "maven test done"  
 
   artifacts:
     when: always
     paths:
-      - report/surefire-reports.xml
+      - .report/surefire-reports.xml
     expire_in: "30 days"
 
 checkstyle:
@@ -44,7 +44,7 @@ checkstyle:
     - mvn checkstyle:checkstyle
   artifacts:
     paths:
-      - report/checkstyle-result.xml
+      - .report/checkstyle-result.xml
     expire_in: "1 week"
   allow_failure: true
 
