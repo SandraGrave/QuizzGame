@@ -26,7 +26,6 @@ test:
   extends: .some_script
   script:
     - mvn test
-    - surefire-reports.xml
   artifacts:
     when: always
     paths:
@@ -38,6 +37,7 @@ checkstyle:
   extends: .some_script2
   script:
     - mvn checkstyle:checkstyle
+    - ls -l target/surefire-reports.xml
   artifacts:
     paths:
       - checkstyle-result.xml
