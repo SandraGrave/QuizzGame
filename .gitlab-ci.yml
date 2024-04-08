@@ -29,8 +29,11 @@ test:
   extends: .some_script
   script:
     - mvn test
-    - mvn validate
     - echo "maven test done"
+    - sleep 5
+    - mvn validate
+    - mvn site
+  
   artifacts:
     when: always
     paths:
