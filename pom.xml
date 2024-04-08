@@ -44,11 +44,6 @@
       <artifactId>lombok</artifactId>
       <version>1.18.30</version>
     </dependency>
-    <dependency>
-      <groupId>com.puppycrawl.tools</groupId>
-      <artifactId>checkstyle</artifactId>
-      <version>10.12.3</version>
-    </dependency>
   </dependencies>
 
   <build>
@@ -70,35 +65,24 @@
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-checkstyle-plugin</artifactId>
-        <version>3.1.1</version>
+        <artifactId>maven-pmd-plugin</artifactId>
+        <version>3.15.0</version>
+        <configuration>
+            <targetJdk>1.8</targetJdk>
+        </configuration>
         <executions>
             <execution>
-                <id>validate</id>
-                <phase>validate</phase>
-                <configuration>
-                    <configLocation>checkstyle.xml</configLocation>
-                    <failsOnError>true</failsOnError>
-                </configuration>
+                <id>pmd-check</id>
+                <phase>verify</phase>
                 <goals>
-                    <goal>check</goal>
+                    <goal>pmd</goal>
                 </goals>
             </execution>
         </executions>
     </plugin>
-
     </plugins>
 
   </build>
   <reporting>
-    <plugins>
-      <plugin>
-        <groupId>
-          org.apache.maven.plugins
-        </groupId>
-        <artifactId>maven-checkstyle-plugin</artifactId>
-        <version>3.0.0.</version>
-      </plugin>
-    </plugins>
   </reporting>
 </project>
