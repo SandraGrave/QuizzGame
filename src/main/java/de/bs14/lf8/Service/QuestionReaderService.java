@@ -19,6 +19,21 @@ public class QuestionReaderService {
   private final InputReaderService inputReaderService;
   private final CategoryRepository categoryRepository;
 
+
+  public Question printQuestionOfWholePool() {
+    List<Question> questionList = getAllQuestions(questionRepository);
+    Question randomQuestion = getRandomQuestion(questionList);
+    printQuestion(randomQuestion);
+    return randomQuestion;
+  }
+
+  public Question printQuestionOfCategoryPool() {
+    List<Question> questionsSpecificCategoryList = getQuestionsByCategoryList();
+    Question randomQuestion = getRandomQuestion(questionsSpecificCategoryList);
+    printQuestion(randomQuestion);
+    return randomQuestion;
+  }
+
   public List<Question> getAllQuestions(QuestionRepository questionRepository) {
     return (List<Question>) questionRepository.findAll();
   }
@@ -38,6 +53,7 @@ public class QuestionReaderService {
 
 
   public void printQuestion(Question question) {
+    System.out.println("---------------------------------------------------");
     System.out.println("Frage: " + question.getQuestionStatement());
     System.out.println("Antwort " + question.getAnswerOptionA());
     System.out.println("Antwort " + question.getAnswerOptionB());

@@ -27,26 +27,17 @@ class PointSystemCalculatorServiceTest {
         playerRepositoryMock);
 
     @Test
-    void testWhenCalculatePointsAnswerIsRightThenCalculateNewPointsAndSaveInDatabase() {
+    void testWhenCalculatePointsThenIncrementPoints() {
         //given
         String playerAnswer = "A";
 
         // when
-        pointSystemCalculatorService.calculatePoints(player, question, playerAnswer);
+        pointSystemCalculatorService.setCalculatedPoints(player);
 
         //then
         assertEquals(1, player.getRankingPoints());
     }
 
-    @Test
-    void testWhenCalculatePointsAnswerIsWrongThenNoChange() {
-        //given
-        String playerAnswer = "B";
+    //ToDO: Test, dass Punkt erhöht, wenn schon ein Puknt vorhanden ist (Sollte dan 2 Pkt sein)
 
-        // when
-        pointSystemCalculatorService.calculatePoints(player, question, playerAnswer);
-
-        //then
-        assertEquals(0, player.getRankingPoints());
-    }
 }
