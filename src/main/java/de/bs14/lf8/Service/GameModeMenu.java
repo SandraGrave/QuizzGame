@@ -71,7 +71,7 @@ public class GameModeMenu {
           for (int i = 0; i <= 2; i++) {
             rankedMode.startGameModeRound(multiplayerTwo, inputReaderService, questionReaderService);
           }
-          rankedMode.identifyWinner(multiplayerOne, multiplayerTwo); //Todo: Wer hat gewonnen?
+          rankedMode.identifyWinner(multiplayerOne, multiplayerTwo);
           rankedMode.endGame(rankingService);
           x = false;
           break;
