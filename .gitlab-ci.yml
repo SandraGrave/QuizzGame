@@ -30,7 +30,7 @@ test:
   artifacts:
     when: always
     paths:
-      - surefire-reports
+      - mv target/surefire-reports.xml surefire-reports.xml
     expire_in: "30 days"
 
 checkstyle:
@@ -42,6 +42,6 @@ checkstyle:
     - ls -l target
   artifacts:
     paths:
-      - checkstyle-result.xml
+      - mv target/checkstyle-result.xml checkstyle-result.xml
     expire_in: "1 week"
   allow_failure: true
