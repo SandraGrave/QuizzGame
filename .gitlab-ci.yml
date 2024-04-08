@@ -25,8 +25,7 @@ test:
   stage: test
   extends: .some_script
   script:
-    - mvn test >> surefire-reports.xml
-    - echo "surefire-reports.xml"
+    - mvn surefire:test
     - sleep 10
   artifacts:
     when: always
@@ -38,7 +37,7 @@ checkstyle:
   stage: checkstyle
   extends: .some_script2
   script:
-    - mvn checkstyle:checkstyle >> checkstyle-result.xml
+    - mvn checkstyle:checkstyle -Dcheckstyle.output.file=checkstyle-result.xml
   artifacts:
     paths:
       - checkstyle-result.xml

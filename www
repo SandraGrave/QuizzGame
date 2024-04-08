@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="9.3">
+<file name="C:\Users\l3vin\Desktop\ \LF8\lf8-dsle\src\main\java\de\bs14\lf8\Lf8Application.java">
+<error line="1" severity="error" message="Es fehlt eine package-info.java." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
+<error line="3" column="27" severity="error" message="Stern-Importe der Form &apos;.*&apos; sollten vermieden werden - de.bs14.lf8.Service.*." source="com.puppycrawl.tools.checkstyle.checks.imports.AvoidStarImportCheck"/>
+<error line="4" column="8" severity="error" message="Nicht verwendeter Import - de.bs14.lf8.model.Player." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="5" column="8" severity="error" message="Nicht verwendeter Import - de.bs14.lf8.model.Question." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="15" column="8" severity="error" message="Nicht verwendeter Import - java.util.List." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="22" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="23" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="24" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="25" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="26" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="28" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="29" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="30" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="31" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="32" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="33" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="34" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="37" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="37" column="27" severity="error" message="Der Parameter args sollte als &apos;final&apos; deklariert sein." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="41" column="3" severity="error" message="Klasse &apos;Lf8Application&apos; sieht wie zur Erweiterung entworfen aus (kann subclassed werden), aber die Methode &apos;run&apos; besitzt keinen Javadoc-Kommentar, der erklärt, wie Sie das sicher tun. Wenn die Klasse nicht für Erweiterungen ausgelegt ist, sollten sie die Klasse &apos;Lf8Application&apos; final oder die Methode &apos;run&apos; static/final/abstract/empty machen oder die zugelassene Annotation für die Methode hinzufügen." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="42" column="19" severity="error" message="Der Parameter args sollte als &apos;final&apos; deklariert sein." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="47" severity="error" message="Zeile ist 107 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="48" severity="error" message="Zeile ist 94 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="49" severity="error" message="Zeile ist 86 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="51" severity="error" message="Zeile ist 87 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="53" severity="error" message="Zeile ist 108 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="54" severity="error" message="Zeile ist 104 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="55" severity="error" message="Zeile ist 103 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="58" severity="error" message="Zeile ist 87 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="62" severity="error" message="Zeile ist 85 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="63" severity="error" message="Zeile ist 95 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+<file name="C:\Users\l3vin\Desktop\ \LF8\lf8-dsle\src\main\java\de\bs14\lf8\model\Category.java">
+<error line="1" severity="error" message="Es fehlt eine package-info.java." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
+<error line="22" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="22" column="19" severity="error" message="Der Parameter categoryName sollte als &apos;final&apos; deklariert sein." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="22" column="26" severity="error" message="Die Variable &apos;categoryName&apos; verbirgt ein Feld." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
+<error line="26" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="31" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+</file>
+<file name="C:\Users\l3vin\Desktop\ \LF8\lf8-dsle\src\main\java\de\bs14\lf8\model\Player.java">
+<error line="22" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="27" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="30" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="33" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="36" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="39" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="39" column="17" severity="error" message="Der Parameter playerName sollte als &apos;final&apos; deklariert sein." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="39" column="24" severity="error" message="Die Variable &apos;playerName&apos; verbirgt ein Feld." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
+<error line="39" column="36" severity="error" message="Der Parameter playerPassword sollte als &apos;final&apos; deklariert sein." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="39" column="43" severity="error" message="Die Variable &apos;playerPassword&apos; verbirgt ein Feld." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
+</file>
+<file name="C:\Users\l3vin\Desktop\ \LF8\lf8-dsle\src\main\java\de\bs14\lf8\model\Question.java">
+<error line="22" column="5" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="27" column="5" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="30" column="5" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="33" column="5" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="36" column="5" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="39" column="5" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="42" column="5" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="45" column="5" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="48" column="5" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="51" severity="error" message="Zeile ist 97 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="51" column="5" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="51" column="12" severity="error" message="Konstruktor/Methode hat 8 Parameter (Obergrenze ist 7)." source="com.puppycrawl.tools.checkstyle.checks.sizes.ParameterNumberCheck"/>
+<error line="51" column="21" severity="error" message="Der Parameter category sollte als &apos;final&apos; deklariert sein." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="51" column="25" severity="error" message="Die Variable &apos;category&apos; verbirgt ein Feld." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
+<error line="51" column="35" severity="error" message="Der Parameter difficulty sollte als &apos;final&apos; deklariert sein." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="51" column="39" severity="error" message="Die Variable &apos;difficulty&apos; verbirgt ein Feld." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
+<error line="51" column="51" severity="error" message="Der Parameter questionStatement sollte als &apos;final&apos; deklariert sein." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="51" column="58" severity="error" message="Die Variable &apos;questionStatement&apos; verbirgt ein Feld." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
+<error line="51" column="77" severity="error" message="Der Parameter answerOptionA sollte als &apos;final&apos; deklariert sein." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="51" column="84" severity="error" message="Die Variable &apos;answerOptionA&apos; verbirgt ein Feld." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
+<error line="52" severity="error" message="Zeile ist 95 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="52" column="9" severity="error" message="Der Parameter answerOptionB sollte als &apos;final&apos; deklariert sein." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="52" column="16" severity="error" message="Die Variable &apos;answerOptionB&apos; verbirgt ein Feld." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
+<error line="52" column="31" severity="error" message="Der Parameter answerOptionC sollte als &apos;final&apos; deklariert sein." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="52" column="38" severity="error" message="Die Variable &apos;answerOptionC&apos; verbirgt ein Feld." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
+<error line="52" column="53" severity="error" message="Der Parameter answerOptionD sollte als &apos;final&apos; deklariert sein." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="52" column="60" severity="error" message="Die Variable &apos;answerOptionD&apos; verbirgt ein Feld." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
+<error line="52" column="75" severity="error" message="Der Parameter rightAnswer sollte als &apos;final&apos; deklariert sein." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="52" column="82" severity="error" message="Die Variable &apos;rightAnswer&apos; verbirgt ein Feld." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
+<error line="60" column="23" severity="error" message="Vor &apos;=&apos; fehlt ein Leerzeichen." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+</file>
+<file name="C:\Users\l3vin\Desktop\ \LF8\lf8-dsle\src\main\java\de\bs14\lf8\repository\CategoryRepository.java">
+<error line="1" severity="error" message="Es fehlt eine package-info.java." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
+</file>
+<file name="C:\Users\l3vin\Desktop\ \LF8\lf8-dsle\src\main\java\de\bs14\lf8\repository\PlayerRepository.java">
+<error line="12" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="13" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+</file>
+<file name="C:\Users\l3vin\Desktop\ \LF8\lf8-dsle\src\main\java\de\bs14\lf8\repository\QuestionRepository.java">
+<error line="8" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+</file>
+<file name="C:\Users\l3vin\Desktop\ \LF8\lf8-dsle\src\main\java\de\bs14\lf8\Service\AskQuestionService.java">
+<error line="1" severity="error" message="Es fehlt eine package-info.java." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
+<error line="9" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="10" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="11" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="14" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="14" column="3" severity="error" message="Klasse &apos;AskQuestionService&apos; sieht wie zur Erweiterung entworfen aus (kann subclassed werden), aber die Methode &apos;askQuestion&apos; besitzt keinen Javadoc-Kommentar, der erklärt, wie Sie das sicher tun. Wenn die Klasse nicht für Erweiterungen ausgelegt ist, sollten sie die Klasse &apos;AskQuestionService&apos; final oder die Methode &apos;askQuestion&apos; static/final/abstract/empty machen oder die zugelassene Annotation für die Methode hinzufügen." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="14" column="27" severity="error" message="Der Parameter question sollte als &apos;final&apos; deklariert sein." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="18" severity="error" message="Zeile ist 105 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="21" column="46" severity="error" message="Der Ausdruck kann vereinfacht werden." source="com.puppycrawl.tools.checkstyle.checks.coding.SimplifyBooleanExpressionCheck"/>
+<error line="28" column="34" severity="error" message="Ein Block muss mindestens eine Anweisung enthalten." source="com.puppycrawl.tools.checkstyle.checks.blocks.EmptyBlockCheck"/>
+</file>
+<file name="C:\Users\l3vin\Desktop\ \LF8\lf8-dsle\src\main\java\de\bs14\lf8\Service\CountdownThreadService.java">
+<error line="10" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="11" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="12" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="14" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="19" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="19" column="3" severity="error" message="Klasse &apos;CountdownThreadService&apos; sieht wie zur Erweiterung entworfen aus (kann subclassed werden), aber die Methode &apos;run&apos; besitzt keinen Javadoc-Kommentar, der erklärt, wie Sie das sicher tun. Wenn die Klasse nicht für Erweiterungen ausgelegt ist, sollten sie die Klasse &apos;CountdownThreadService&apos; final oder die Methode &apos;run&apos; static/final/abstract/empty machen oder die zugelassene Annotation für die Methode hinzufügen." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="27" severity="error" message="Zeile ist 103 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="31" column="11" severity="error" message="Die magische Zahl &apos;1000&apos; sollte als Konstante definiert werden." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="35" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="35" column="3" severity="error" message="Klasse &apos;CountdownThreadService&apos; sieht wie zur Erweiterung entworfen aus (kann subclassed werden), aber die Methode &apos;isTimeUp&apos; besitzt keinen Javadoc-Kommentar, der erklärt, wie Sie das sicher tun. Wenn die Klasse nicht für Erweiterungen ausgelegt ist, sollten sie die Klasse &apos;CountdownThreadService&apos; final oder die Methode &apos;isTimeUp&apos; static/final/abstract/empty machen oder die zugelassene Annotation für die Methode hinzufügen." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="39" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="39" column="3" severity="error" message="Klasse &apos;CountdownThreadService&apos; sieht wie zur Erweiterung entworfen aus (kann subclassed werden), aber die Methode &apos;stopCountdown&apos; besitzt keinen Javadoc-Kommentar, der erklärt, wie Sie das sicher tun. Wenn die Klasse nicht für Erweiterungen ausgelegt ist, sollten sie die Klasse &apos;CountdownThreadService&apos; final oder die Methode &apos;stopCountdown&apos; static/final/abstract/empty machen oder die zugelassene Annotation für die Methode hinzufügen." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="43" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="43" column="3" severity="error" message="Klasse &apos;CountdownThreadService&apos; sieht wie zur Erweiterung entworfen aus (kann subclassed werden), aber die Methode &apos;getRemainingTime&apos; besitzt keinen Javadoc-Kommentar, der erklärt, wie Sie das sicher tun. Wenn die Klasse nicht für Erweiterungen ausgelegt ist, sollten sie die Klasse &apos;CountdownThreadService&apos; final oder die Methode &apos;getRemainingTime&apos; static/final/abstract/empty machen oder die zugelassene Annotation für die Methode hinzufügen." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="C:\Users\l3vin\Desktop\ \LF8\lf8-dsle\src\main\java\de\bs14\lf8\Service\DatabaseInsertCheckerService.java">
+<error line="6" column="8" severity="error" message="Nicht verwendeter Import - org.hibernate.sql.Insert." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="11" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="12" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="13" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="16" severity="error" message="Zeile ist 145 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="16" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="16" column="39" severity="error" message="Der Parameter questionRepository sollte als &apos;final&apos; deklariert sein." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="16" column="58" severity="error" message="Die Variable &apos;questionRepository&apos; verbirgt ein Feld." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
+<error line="16" column="78" severity="error" message="Der Parameter categoryRepository sollte als &apos;final&apos; deklariert sein." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="16" column="97" severity="error" message="Die Variable &apos;categoryRepository&apos; verbirgt ein Feld." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
+<error line="16" column="117" severity="error" message="Der Parameter insertService sollte als &apos;final&apos; deklariert sein." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="16" column="131" severity="error" message="Die Variable &apos;insertService&apos; verbirgt ein Feld." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
+<error line="16" column="145" severity="error" message="Vor &apos;{&apos; fehlt ein Leerzeichen." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="24" column="76" severity="error" message="Vor &apos;)&apos; befindet sich ein Leerzeichen." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+<error line="26" column="5" severity="error" message="&apos;}&apos; an Position 5 sollte in einer eigenen Zeile stehen." source="com.puppycrawl.tools.checkstyle.checks.blocks.RightCurlyCheck"/>
+<error line="30" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="30" column="3" severity="error" message="Klasse &apos;DatabaseInsertCheckerService&apos; sieht wie zur Erweiterung entworfen aus (kann subclassed werden), aber die Methode &apos;preProcessDatabase&apos; besitzt keinen Javadoc-Kommentar, der erklärt, wie Sie das sicher tun. Wenn die Klasse nicht für Erweiterungen ausgelegt ist, sollten sie die Klasse &apos;DatabaseInsertCheckerService&apos; final oder die Methode &apos;preProcessDatabase&apos; static/final/abstract/empty machen oder die zugelassene Annotation für die Methode hinzufügen." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="30" column="35" severity="error" message="Vor &apos;{&apos; fehlt ein Leerzeichen." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+</file>
+<file name="C:\Users\l3vin\Desktop\ \LF8\lf8-dsle\src\main\java\de\bs14\lf8\Service\GameModeMenu.java">
+<error line="12" column="5" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="14" column="5" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="14" column="5" severity="error" message="Klasse &apos;GameModeMenu&apos; sieht wie zur Erweiterung entworfen aus (kann subclassed werden), aber die Methode &apos;chooseGameMode&apos; besitzt keinen Javadoc-Kommentar, der erklärt, wie Sie das sicher tun. Wenn die Klasse nicht für Erweiterungen ausgelegt ist, sollten sie die Klasse &apos;GameModeMenu&apos; final oder die Methode &apos;chooseGameMode&apos; static/final/abstract/empty machen oder die zugelassene Annotation für die Methode hinzufügen." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="25" severity="error" message="Zeile ist 83 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="26" severity="error" message="Zeile ist 88 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="27" severity="error" message="Zeile ist 86 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="35" severity="error" message="Zeile ist 114 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="40" severity="error" message="Zeile ist 109 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="45" severity="error" message="Zeile ist 113 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="46" column="38" severity="error" message="Die magische Zahl &apos;3&apos; sollte als Konstante definiert werden." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+</file>
+<file name="C:\Users\l3vin\Desktop\ \LF8\lf8-dsle\src\main\java\de\bs14\lf8\Service\HelpService.java">
+<error line="1" severity="error" message="Datei endet nicht mit einem Zeilenumbruch." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+<error line="6" column="8" severity="error" message="Nicht verwendeter Import - java.util.Scanner." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="12" column="5" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="12" column="5" severity="error" message="Klasse &apos;HelpService&apos; sieht wie zur Erweiterung entworfen aus (kann subclassed werden), aber die Methode &apos;showHelp&apos; besitzt keinen Javadoc-Kommentar, der erklärt, wie Sie das sicher tun. Wenn die Klasse nicht für Erweiterungen ausgelegt ist, sollten sie die Klasse &apos;HelpService&apos; final oder die Methode &apos;showHelp&apos; static/final/abstract/empty machen oder die zugelassene Annotation für die Methode hinzufügen." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="12" column="27" severity="error" message="Vor &apos;{&apos; fehlt ein Leerzeichen." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="15" severity="error" message="Zeile ist 175 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="16" severity="error" message="Zeile ist 250 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="17" severity="error" message="Zeile ist 277 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="18" severity="error" message="Zeile ist 164 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="19" severity="error" message="Zeile ist 164 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+<file name="C:\Users\l3vin\Desktop\ \LF8\lf8-dsle\src\main\java\de\bs14\lf8\Service\InputReaderService.java">
+<error line="10" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="11" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="11" column="11" severity="error" message="Das Feld &apos;scanner&apos; muss als private deklariert werden und Zugriffsmethoden haben." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
+<error line="13" severity="error" message="Zeile ist 87 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="13" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="13" column="3" severity="error" message="Klasse &apos;InputReaderService&apos; sieht wie zur Erweiterung entworfen aus (kann subclassed werden), aber die Methode &apos;readInputWithTimeLimit&apos; besitzt keinen Javadoc-Kommentar, der erklärt, wie Sie das sicher tun. Wenn die Klasse nicht für Erweiterungen ausgelegt ist, sollten sie die Klasse &apos;InputReaderService&apos; final oder die Methode &apos;readInputWithTimeLimit&apos; static/final/abstract/empty machen oder die zugelassene Annotation für die Methode hinzufügen." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="13" column="40" severity="error" message="Der Parameter countdownThreadService sollte als &apos;final&apos; deklariert sein." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="34" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="34" column="3" severity="error" message="Klasse &apos;InputReaderService&apos; sieht wie zur Erweiterung entworfen aus (kann subclassed werden), aber die Methode &apos;readInput&apos; besitzt keinen Javadoc-Kommentar, der erklärt, wie Sie das sicher tun. Wenn die Klasse nicht für Erweiterungen ausgelegt ist, sollten sie die Klasse &apos;InputReaderService&apos; final oder die Methode &apos;readInput&apos; static/final/abstract/empty machen oder die zugelassene Annotation für die Methode hinzufügen." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="46" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="46" column="3" severity="error" message="Klasse &apos;InputReaderService&apos; sieht wie zur Erweiterung entworfen aus (kann subclassed werden), aber die Methode &apos;stopWaiting&apos; besitzt keinen Javadoc-Kommentar, der erklärt, wie Sie das sicher tun. Wenn die Klasse nicht für Erweiterungen ausgelegt ist, sollten sie die Klasse &apos;InputReaderService&apos; final oder die Methode &apos;stopWaiting&apos; static/final/abstract/empty machen oder die zugelassene Annotation für die Methode hinzufügen." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="C:\Users\l3vin\Desktop\ \LF8\lf8-dsle\src\main\java\de\bs14\lf8\Service\InputReaderThreadService.java">
+<error line="5" column="8" severity="error" message="Nicht verwendeter Import - java.io.IOException." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="9" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="10" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="12" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="12" column="35" severity="error" message="Der Parameter inputReaderService sollte als &apos;final&apos; deklariert sein." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="12" column="54" severity="error" message="Die Variable &apos;inputReaderService&apos; verbirgt ein Feld." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
+<error line="16" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="21" severity="error" message="Zeile ist 132 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="21" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="21" column="3" severity="error" message="Klasse &apos;InputReaderThreadService&apos; sieht wie zur Erweiterung entworfen aus (kann subclassed werden), aber die Methode &apos;interrupt&apos; besitzt keinen Javadoc-Kommentar, der erklärt, wie Sie das sicher tun. Wenn die Klasse nicht für Erweiterungen ausgelegt ist, sollten sie die Klasse &apos;InputReaderThreadService&apos; final oder die Methode &apos;interrupt&apos; static/final/abstract/empty machen oder die zugelassene Annotation für die Methode hinzufügen." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="25" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="25" column="3" severity="error" message="Klasse &apos;InputReaderThreadService&apos; sieht wie zur Erweiterung entworfen aus (kann subclassed werden), aber die Methode &apos;isAnswerGiven&apos; besitzt keinen Javadoc-Kommentar, der erklärt, wie Sie das sicher tun. Wenn die Klasse nicht für Erweiterungen ausgelegt ist, sollten sie die Klasse &apos;InputReaderThreadService&apos; final oder die Methode &apos;isAnswerGiven&apos; static/final/abstract/empty machen oder die zugelassene Annotation für die Methode hinzufügen." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="29" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="29" column="3" severity="error" message="Klasse &apos;InputReaderThreadService&apos; sieht wie zur Erweiterung entworfen aus (kann subclassed werden), aber die Methode &apos;getPlayerAnswer&apos; besitzt keinen Javadoc-Kommentar, der erklärt, wie Sie das sicher tun. Wenn die Klasse nicht für Erweiterungen ausgelegt ist, sollten sie die Klasse &apos;InputReaderThreadService&apos; final oder die Methode &apos;getPlayerAnswer&apos; static/final/abstract/empty machen oder die zugelassene Annotation für die Methode hinzufügen." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+</file>
+<file name="C:\Users\l3vin\Desktop\ \LF8\lf8-dsle\src\main\java\de\bs14\lf8\Service\InsertService.java">
+<error line="17" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="18" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="19" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="21" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="21" column="3" severity="error" message="Klasse &apos;InsertService&apos; sieht wie zur Erweiterung entworfen aus (kann subclassed werden), aber die Methode &apos;createInserts&apos; besitzt keinen Javadoc-Kommentar, der erklärt, wie Sie das sicher tun. Wenn die Klasse nicht für Erweiterungen ausgelegt ist, sollten sie die Klasse &apos;InsertService&apos; final oder die Methode &apos;createInserts&apos; static/final/abstract/empty machen oder die zugelassene Annotation für die Methode hinzufügen." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="21" column="3" severity="error" message="Methode createInserts ist 174 Zeilen lang (Obergrenze ist 150)." source="com.puppycrawl.tools.checkstyle.checks.sizes.MethodLengthCheck"/>
+<error line="26" severity="error" message="Zeile ist 114 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="27" severity="error" message="Zeile ist 102 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="28" severity="error" message="Zeile ist 133 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="31" severity="error" message="Zeile ist 128 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="31" column="25" severity="error" message="Die magische Zahl &apos;3&apos; sollte als Konstante definiert werden." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="32" severity="error" message="Zeile ist 136 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="35" severity="error" message="Zeile ist 121 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="36" severity="error" message="Zeile ist 116 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="39" severity="error" message="Zeile ist 83 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="40" severity="error" message="Zeile ist 125 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="41" severity="error" message="Zeile ist 103 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="42" severity="error" message="Zeile ist 89 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="46" severity="error" message="Zeile ist 134 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="47" severity="error" message="Zeile ist 92 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="49" severity="error" message="Zeile ist 128 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="52" severity="error" message="Zeile ist 135 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="52" column="25" severity="error" message="Die magische Zahl &apos;3&apos; sollte als Konstante definiert werden." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="53" severity="error" message="Zeile ist 136 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="55" severity="error" message="Zeile ist 131 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="56" severity="error" message="Zeile ist 108 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="58" severity="error" message="Zeile ist 124 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="59" severity="error" message="Zeile ist 92 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="63" severity="error" message="Zeile ist 121 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="63" column="22" severity="error" message="Die magische Zahl &apos;3&apos; sollte als Konstante definiert werden." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="64" severity="error" message="Zeile ist 130 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="65" severity="error" message="Zeile ist 84 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="67" severity="error" message="Zeile ist 124 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="67" column="22" severity="error" message="Die magische Zahl &apos;3&apos; sollte als Konstante definiert werden." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="68" severity="error" message="Zeile ist 90 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="70" severity="error" message="Zeile ist 133 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="70" column="22" severity="error" message="Die magische Zahl &apos;3&apos; sollte als Konstante definiert werden." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="70" column="25" severity="error" message="Die magische Zahl &apos;3&apos; sollte als Konstante definiert werden." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="71" severity="error" message="Zeile ist 114 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="73" severity="error" message="Zeile ist 98 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="73" column="22" severity="error" message="Die magische Zahl &apos;3&apos; sollte als Konstante definiert werden." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="74" severity="error" message="Zeile ist 113 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="77" severity="error" message="Zeile ist 97 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="77" column="22" severity="error" message="Die magische Zahl &apos;3&apos; sollte als Konstante definiert werden." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="78" severity="error" message="Zeile ist 112 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="79" severity="error" message="Zeile ist 82 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="83" severity="error" message="Zeile ist 126 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="83" column="22" severity="error" message="Die magische Zahl &apos;4&apos; sollte als Konstante definiert werden." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="84" severity="error" message="Zeile ist 124 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="85" severity="error" message="Zeile ist 86 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="87" severity="error" message="Zeile ist 119 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="87" column="22" severity="error" message="Die magische Zahl &apos;4&apos; sollte als Konstante definiert werden." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="88" severity="error" message="Zeile ist 114 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="90" severity="error" message="Zeile ist 140 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="90" column="22" severity="error" message="Die magische Zahl &apos;4&apos; sollte als Konstante definiert werden." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="90" column="25" severity="error" message="Die magische Zahl &apos;3&apos; sollte als Konstante definiert werden." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="91" severity="error" message="Zeile ist 126 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="94" severity="error" message="Zeile ist 129 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="94" column="22" severity="error" message="Die magische Zahl &apos;4&apos; sollte als Konstante definiert werden." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="95" severity="error" message="Zeile ist 82 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="96" severity="error" message="Zeile ist 138 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="99" severity="error" message="Zeile ist 120 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="99" column="22" severity="error" message="Die magische Zahl &apos;4&apos; sollte als Konstante definiert werden." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="100" severity="error" message="Zeile ist 95 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="104" severity="error" message="Zeile ist 126 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="104" column="22" severity="error" message="Die magische Zahl &apos;5&apos; sollte als Konstante definiert werden." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="105" severity="error" message="Zeile ist 99 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="107" severity="error" message="Zeile ist 137 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="107" column="22" severity="error" message="Die magische Zahl &apos;5&apos; sollte als Konstante definiert werden." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="110" severity="error" message="Zeile ist 122 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="110" column="22" severity="error" message="Die magische Zahl &apos;5&apos; sollte als Konstante definiert werden." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="110" column="25" severity="error" message="Die magische Zahl &apos;3&apos; sollte als Konstante definiert werden." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="111" severity="error" message="Zeile ist 131 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="112" severity="error" message="Zeile ist 83 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="114" severity="error" message="Zeile ist 126 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="114" column="22" severity="error" message="Die magische Zahl &apos;5&apos; sollte als Konstante definiert werden." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="115" severity="error" message="Zeile ist 105 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="117" severity="error" message="Zeile ist 107 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="117" column="22" severity="error" message="Die magische Zahl &apos;5&apos; sollte als Konstante definiert werden." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="118" severity="error" message="Zeile ist 104 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="123" severity="error" message="Zeile ist 91 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="123" column="22" severity="error" message="Die magische Zahl &apos;6&apos; sollte als Konstante definiert werden." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="125" severity="error" message="Zeile ist 101 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="126" severity="error" message="Zeile ist 140 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="128" severity="error" message="Zeile ist 140 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="128" column="22" severity="error" message="Die magische Zahl &apos;6&apos; sollte als Konstante definiert werden." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="129" severity="error" message="Zeile ist 90 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="131" severity="error" message="Zeile ist 89 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="133" column="22" severity="error" message="Die magische Zahl &apos;6&apos; sollte als Konstante definiert werden." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="133" column="25" severity="error" message="Die magische Zahl &apos;3&apos; sollte als Konstante definiert werden." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="134" severity="error" message="Zeile ist 123 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="135" severity="error" message="Zeile ist 86 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="136" severity="error" message="Zeile ist 113 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="137" severity="error" message="Zeile ist 102 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="139" column="22" severity="error" message="Die magische Zahl &apos;6&apos; sollte als Konstante definiert werden." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="140" severity="error" message="Zeile ist 151 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="141" severity="error" message="Zeile ist 85 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="142" severity="error" message="Zeile ist 83 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="143" severity="error" message="Zeile ist 94 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="145" severity="error" message="Zeile ist 88 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="145" column="22" severity="error" message="Die magische Zahl &apos;6&apos; sollte als Konstante definiert werden." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="146" severity="error" message="Zeile ist 119 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="147" severity="error" message="Zeile ist 119 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="148" severity="error" message="Zeile ist 101 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="149" severity="error" message="Zeile ist 112 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="153" severity="error" message="Zeile ist 136 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="153" column="22" severity="error" message="Die magische Zahl &apos;7&apos; sollte als Konstante definiert werden." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="154" severity="error" message="Zeile ist 117 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="157" severity="error" message="Zeile ist 121 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="157" column="22" severity="error" message="Die magische Zahl &apos;7&apos; sollte als Konstante definiert werden." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="158" severity="error" message="Zeile ist 83 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="159" severity="error" message="Zeile ist 137 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="162" severity="error" message="Zeile ist 130 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="162" column="22" severity="error" message="Die magische Zahl &apos;7&apos; sollte als Konstante definiert werden." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="162" column="25" severity="error" message="Die magische Zahl &apos;3&apos; sollte als Konstante definiert werden." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="163" severity="error" message="Zeile ist 86 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="165" severity="error" message="Zeile ist 91 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="167" severity="error" message="Zeile ist 140 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="167" column="22" severity="error" message="Die magische Zahl &apos;7&apos; sollte als Konstante definiert werden." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="168" severity="error" message="Zeile ist 137 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="171" severity="error" message="Zeile ist 88 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="171" column="22" severity="error" message="Die magische Zahl &apos;7&apos; sollte als Konstante definiert werden." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="172" severity="error" message="Zeile ist 118 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="173" severity="error" message="Zeile ist 118 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="174" severity="error" message="Zeile ist 119 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="175" severity="error" message="Zeile ist 103 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+<file name="C:\Users\l3vin\Desktop\ \LF8\lf8-dsle\src\main\java\de\bs14\lf8\Service\MainMenu.java">
+<error line="12" column="5" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="13" column="5" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="14" column="5" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="15" column="5" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="15" column="5" severity="error" message="Klasse &apos;MainMenu&apos; sieht wie zur Erweiterung entworfen aus (kann subclassed werden), aber die Methode &apos;showMainMenu&apos; besitzt keinen Javadoc-Kommentar, der erklärt, wie Sie das sicher tun. Wenn die Klasse nicht für Erweiterungen ausgelegt ist, sollten sie die Klasse &apos;MainMenu&apos; final oder die Methode &apos;showMainMenu&apos; static/final/abstract/empty machen oder die zugelassene Annotation für die Methode hinzufügen." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="20" column="9" severity="error" message="Nach &apos;while&apos; fehlt ein Leerzeichen." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
+</file>
+<file name="C:\Users\l3vin\Desktop\ \LF8\lf8-dsle\src\main\java\de\bs14\lf8\Service\PlayerReaderService.java">
+<error line="13" column="1" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="14" column="1" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="17" column="5" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="17" column="5" severity="error" message="Klasse &apos;PlayerReaderService&apos; sieht wie zur Erweiterung entworfen aus (kann subclassed werden), aber die Methode &apos;findCurrentPlayer&apos; besitzt keinen Javadoc-Kommentar, der erklärt, wie Sie das sicher tun. Wenn die Klasse nicht für Erweiterungen ausgelegt ist, sollten sie die Klasse &apos;PlayerReaderService&apos; final oder die Methode &apos;findCurrentPlayer&apos; static/final/abstract/empty machen oder die zugelassene Annotation für die Methode hinzufügen." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="17" column="37" severity="error" message="Der Parameter playerRepository sollte als &apos;final&apos; deklariert sein." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="17" column="54" severity="error" message="Die Variable &apos;playerRepository&apos; verbirgt ein Feld." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
+<error line="17" column="71" severity="error" message="Vor &apos;{&apos; fehlt ein Leerzeichen." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="20" severity="error" message="Zeile ist 87 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+<file name="C:\Users\l3vin\Desktop\ \LF8\lf8-dsle\src\main\java\de\bs14\lf8\Service\PointSystemCalculatorService.java">
+<error line="14" column="5" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="15" column="5" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="17" column="5" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="17" column="5" severity="error" message="Klasse &apos;PointSystemCalculatorService&apos; sieht wie zur Erweiterung entworfen aus (kann subclassed werden), aber die Methode &apos;calculatePoints&apos; besitzt keinen Javadoc-Kommentar, der erklärt, wie Sie das sicher tun. Wenn die Klasse nicht für Erweiterungen ausgelegt ist, sollten sie die Klasse &apos;PointSystemCalculatorService&apos; final oder die Methode &apos;calculatePoints&apos; static/final/abstract/empty machen oder die zugelassene Annotation für die Methode hinzufügen." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="18" severity="error" message="Zeile ist 87 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="18" column="33" severity="error" message="Der Parameter player sollte als &apos;final&apos; deklariert sein." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="18" column="48" severity="error" message="Der Parameter question sollte als &apos;final&apos; deklariert sein." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="18" column="67" severity="error" message="Der Parameter playerAnswer sollte als &apos;final&apos; deklariert sein." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="18" column="87" severity="error" message="Vor &apos;{&apos; fehlt ein Leerzeichen." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="21" column="9" severity="error" message="Nach &apos;if&apos; fehlt ein Leerzeichen." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
+<error line="21" column="78" severity="error" message="Vor &apos;{&apos; fehlt ein Leerzeichen." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+</file>
+<file name="C:\Users\l3vin\Desktop\ \LF8\lf8-dsle\src\main\java\de\bs14\lf8\Service\QuestionReaderService.java">
+<error line="18" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="19" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="20" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="22" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="22" column="3" severity="error" message="Klasse &apos;QuestionReaderService&apos; sieht wie zur Erweiterung entworfen aus (kann subclassed werden), aber die Methode &apos;getAllQuestions&apos; besitzt keinen Javadoc-Kommentar, der erklärt, wie Sie das sicher tun. Wenn die Klasse nicht für Erweiterungen ausgelegt ist, sollten sie die Klasse &apos;QuestionReaderService&apos; final oder die Methode &apos;getAllQuestions&apos; static/final/abstract/empty machen oder die zugelassene Annotation für die Methode hinzufügen." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="22" column="41" severity="error" message="Der Parameter questionRepository sollte als &apos;final&apos; deklariert sein." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="22" column="60" severity="error" message="Die Variable &apos;questionRepository&apos; verbirgt ein Feld." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
+<error line="27" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="27" column="3" severity="error" message="Klasse &apos;QuestionReaderService&apos; sieht wie zur Erweiterung entworfen aus (kann subclassed werden), aber die Methode &apos;getQuestionsByCategoryList&apos; besitzt keinen Javadoc-Kommentar, der erklärt, wie Sie das sicher tun. Wenn die Klasse nicht für Erweiterungen ausgelegt ist, sollten sie die Klasse &apos;QuestionReaderService&apos; final oder die Methode &apos;getQuestionsByCategoryList&apos; static/final/abstract/empty machen oder die zugelassene Annotation für die Methode hinzufügen." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="33" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="33" column="3" severity="error" message="Klasse &apos;QuestionReaderService&apos; sieht wie zur Erweiterung entworfen aus (kann subclassed werden), aber die Methode &apos;getRandomQuestion&apos; besitzt keinen Javadoc-Kommentar, der erklärt, wie Sie das sicher tun. Wenn die Klasse nicht für Erweiterungen ausgelegt ist, sollten sie die Klasse &apos;QuestionReaderService&apos; final oder die Methode &apos;getRandomQuestion&apos; static/final/abstract/empty machen oder die zugelassene Annotation für die Methode hinzufügen." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="33" column="37" severity="error" message="Der Parameter questionList sollte als &apos;final&apos; deklariert sein." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="40" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="40" column="3" severity="error" message="Klasse &apos;QuestionReaderService&apos; sieht wie zur Erweiterung entworfen aus (kann subclassed werden), aber die Methode &apos;printQuestion&apos; besitzt keinen Javadoc-Kommentar, der erklärt, wie Sie das sicher tun. Wenn die Klasse nicht für Erweiterungen ausgelegt ist, sollten sie die Klasse &apos;QuestionReaderService&apos; final oder die Methode &apos;printQuestion&apos; static/final/abstract/empty machen oder die zugelassene Annotation für die Methode hinzufügen." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="40" column="29" severity="error" message="Der Parameter question sollte als &apos;final&apos; deklariert sein." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="50" severity="error" message="Zeile ist 130 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="51" severity="error" message="Zeile ist 81 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="56" severity="error" message="Zeile ist 105 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="63" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="63" column="3" severity="error" message="Klasse &apos;QuestionReaderService&apos; sieht wie zur Erweiterung entworfen aus (kann subclassed werden), aber die Methode &apos;isPlayerAnswerRight&apos; besitzt keinen Javadoc-Kommentar, der erklärt, wie Sie das sicher tun. Wenn die Klasse nicht für Erweiterungen ausgelegt ist, sollten sie die Klasse &apos;QuestionReaderService&apos; final oder die Methode &apos;isPlayerAnswerRight&apos; static/final/abstract/empty machen oder die zugelassene Annotation für die Methode hinzufügen." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="63" column="38" severity="error" message="Der Parameter question sollte als &apos;final&apos; deklariert sein." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="63" column="57" severity="error" message="Der Parameter playerAnswer sollte als &apos;final&apos; deklariert sein." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="70" severity="error" message="Zeile ist 89 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+<file name="C:\Users\l3vin\Desktop\ \LF8\lf8-dsle\src\main\java\de\bs14\lf8\Service\RankingService.java">
+<error line="19" severity="error" message="Zeile ist 89 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="25" severity="error" message="Zeile ist 126 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="43" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="45" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="45" column="3" severity="error" message="Klasse &apos;RankingService&apos; sieht wie zur Erweiterung entworfen aus (kann subclassed werden), aber die Methode &apos;showRankingList&apos; besitzt keinen Javadoc-Kommentar, der erklärt, wie Sie das sicher tun. Wenn die Klasse nicht für Erweiterungen ausgelegt ist, sollten sie die Klasse &apos;RankingService&apos; final oder die Methode &apos;showRankingList&apos; static/final/abstract/empty machen oder die zugelassene Annotation für die Methode hinzufügen." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="49" severity="error" message="Zeile ist 89 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="55" severity="error" message="Zeile ist 126 Zeichen lang (Obergrenze ist 80)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="59" column="3" severity="error" message="Es fehlt ein Javadoc-Kommentar." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
+<error line="59" column="3" severity="error" message="Klasse &apos;RankingService&apos; sieht wie zur Erweiterung entworfen aus (kann subclassed werden), aber die Methode &apos;setRankingTitle&apos; besitzt keinen Javadoc-Kommentar, der erklärt, wie Sie das sicher tun. Wenn die Klasse nicht für Erweiterungen ausgelegt ist, sollten sie die Klasse &apos;RankingService&apos; final oder die Methode &apos;setRankingTitle&apos; static/final/abstract/empty machen oder die zugelassene Annotation für die Methode hinzufügen." source="com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck"/>
+<error line="59" column="31" severity="error" message="Der Parameter player sollte als &apos;final&apos; deklariert sein." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="59" column="45" severity="error" message="Vor &apos;{&apos; fehlt ein Leerzeichen." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="62" column="26" severity="error" message="Die magische Zahl &apos;120&apos; sollte als Konstante definiert werden." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="65" column="33" severity="error" message="Die magische Zahl &apos;90&apos; sollte als Konstante definiert werden." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="68" column="33" severity="error" message="Die magische Zahl &apos;50&apos; sollte als Konstante definiert werden." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="71" column="33" severity="error" message="Die magische Zahl &apos;10&apos; sollte als Konstante definiert werden." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+</file>
+</checkstyle>
