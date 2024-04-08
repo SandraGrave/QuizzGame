@@ -16,17 +16,13 @@ stages:
 .some_script2:
   before_script:
     - echo "erstellt Datei"
-    - touch checkstyle-result.txt
+    - touch checkstyle-result.xml
 
 build:
   stage: build
   script:
     - echo "Aufbau der Dockerumgebung"
     - mvn compile
-  only:
-    - branches
-  except:
-    - main
 
 test:
   stage: test
@@ -45,8 +41,10 @@ checkstyle:
   extends: .some_script2
   script:
     - mvn checkstyle:checkstyle
+    - mvn clean verify
   artifacts:
+    when: always
     paths:
-      - checkstyle-result.txt
+      - checkstyle-result.xml
     expire_in: "1 week"
   allow_failure: true
