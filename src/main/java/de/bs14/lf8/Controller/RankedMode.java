@@ -21,7 +21,6 @@ public class RankedMode implements GameMode { //gegen Zeit, Punkte sammeln mögl
   private final PointSystemCalculatorService pointSystemCalculatorService;
   private final Map<Integer, Integer> roundPointsMap = new HashMap<>();
 
-// Todo: Anzeigen, wie viele Punkte man mit der Runde erhalten hat
 
   @Override
   public void startGameModeRound(Player currentPlayer, InputReaderService inputReaderService, QuestionReaderService questionReaderService) {

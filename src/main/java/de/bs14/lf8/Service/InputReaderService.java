@@ -38,12 +38,6 @@ public class InputReaderService {
         return output;
 
       }
-
     }
-  }
-
-
-  public void stopWaiting() {
-    startTime = 0;
   }
 }
