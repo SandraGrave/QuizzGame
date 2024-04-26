@@ -1,6 +1,31 @@
 # LF8 DSLE
 
+Probleme Prototyp:
 
+- Am Anfang sehr Probleme Spring + Maven einzubauen, da Projekt bereits bestand
+
+- Einrichten der Datenbank hat etwas gedauert.
+  Wir hatten zwischenzeitig eine .sql-Datei., die die Datenbank erstellte. War nicht persistent
+
+- Dann für Methode entschieden, eine inmemory mit Spring zu erstellen.
+  (Problem jetzt ist, dass wir die DB nicht wirklich einsehen können. Eigentlich müsste es im Browser gehen, das habe ich aber nicht
+  hinbekommen)
+
+- inserts wurden jedes mal versucht auszuführen. Kam zustande, weil die IDs doppelt vergeben wurden, Methode erstellt, die die inserts nur
+  ausführt, wenn noch gar keine Inserts vorhanden sind
+  Hier haben wir uns mit dem Test bzw. dem Mocken etwas schwer getan
+
+- GameModes einige Probleme mit Interface, aber wollte gern Interface benutzen. Gelernt, dass es default Methoden gibt
+
+- Relativ spät am Ende ist aufgefallen, dass unsere DB immer noch nicht persistent war. In der yml dann von create auf update geändert.
+
+- System. in + System. out
+  (Nicht darauf ausgelegt, dass Console beides gleichzeitig macht, kam zu Problemen, bzw immer noch buggy: wenn VerbleibendeSekunden-Ausgabe
+  genau zeitgleich mit Input vom Player passiert, wird die Eingabe gelöscht, Problem hätte man nicht, wenn man eine UI hätte)
+  Vorübergehend so gelöst, dass alle 5 Sekunden nur eine neue Ausgabe mit verbleibender Zeit kommt.
+
+- Map genutzt, um beim MultiplayerMode Punkte zwischenzuspeichern bevor sie in die DB geladen werden, damit ein Gewinner von dieser Runde
+  ermittelt werden kann. Am Ende der Runde wir die Map geleert
 
 ## Getting started
 
