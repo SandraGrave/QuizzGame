@@ -18,7 +18,7 @@ Es gibt verschiedene Game-Modes (Single-Player ohne Punkte sammeln, Single-Playe
 Derzeit arbeite ich in Figma an einem Prototyp für das Frontend, welches ich in Zukunft noch umsetzen möchte.
 
 
-# Probleme und Lösungen, auf die wir gestoßen sind:
+# Probleme und Lösungen:
 
 - Einrichten der Datenbank hat etwas gedauert.
   Wir hatten zwischenzeitig eine .sql-Datei., die die Datenbank erstellte. War nicht persistent
