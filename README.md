@@ -1,4 +1,4 @@
-# LF8 - Quizz-Spiel
+# Quizz-Spiel
 
 # Um das Spiel spielen zu können:
 Es wird nach einem Spielernamen gefragt. Bisher sind 2 Spieler in der Datenbank hinterlegt:
@@ -7,6 +7,7 @@ Es wird nach einem Spielernamen gefragt. Bisher sind 2 Spieler in der Datenbank 
 (CamelCase beachten)
 Dies ist noch nicht optimal gelöst, aber somit funktiniert das Spiel vorerst.
 
+# Info:
 Dieses Projekt wurde für Lernfeld 8 der Berufsschule durchgeführt. Wir waren eine Gruppe von 4 Leuten. Hier war ich die einzige Person mit Programmier-Kenntnissen, somit habe ich das gesamte Programm gecodet und war die Hilfestellung für meine Gruppe und konnte ihnen teilweise etwas beibringen. (Die Pipeline habe ich jedoch nicht erstellt.)
 
 # Die Idee:
